@@ -38,8 +38,6 @@ module triangle(clk, reset, nt, xi, yi, busy, po, xo, yo);
 		else
 			current_state=next_state;
 			
-		multiple1={4'b0,(x[1]-ans_x)}*{4'b0,(y[2]-y[1])};
-		multiple2={4'b0,(ans_y-y[1])}*{4'b0,(x[1]-x[2])};
 		
 		case(current_state)
 			INIT:
@@ -88,6 +86,8 @@ module triangle(clk, reset, nt, xi, yi, busy, po, xo, yo);
 				//yo=y[9];
 				xo=ans_x;
 				yo=ans_y;
+				multiple1={4'b0,(x[1]-ans_x)}*{4'b0,(y[2]-y[1])};
+				multiple2={4'b0,(ans_y-y[1])}*{4'b0,(x[1]-x[2])};
 				if(ans_x<=x[1]&&(multiple1>=multiple2))
 				begin
 					xo=ans_x;
@@ -99,6 +99,8 @@ module triangle(clk, reset, nt, xi, yi, busy, po, xo, yo);
 				begin
 					ans_x=x[0];
 					ans_y=ans_y+3'b1;
+					multiple1={4'b0,(x[1]-ans_x)}*{4'b0,(y[2]-y[1])};
+					multiple2={4'b0,(ans_y-y[1])}*{4'b0,(x[1]-x[2])};
 					if(ans_y<=y[2]&&(multiple1>=multiple2))
 					begin
 						

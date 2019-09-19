@@ -81,35 +81,36 @@ initial begin
          // cycle 1
          @(negedge clk)
             nt = 1'b1;      
-            #(`CYCLE*3)  // read x1 & y1
+            #(`CYCLE*2)  // read x1 & y1
                data_tmp_i1 = data_base[i];
                xi = data_tmp_i1[5:3];
                yi = data_tmp_i1[2:0];
-         @(posedge clk)
+         /*@(posedge clk)
             #(`CYCLE*2)  // close x1 & y1 
                xi = 3'bz; 
-               yi = 3'bz; 
+               yi = 3'bz; */
          // cycle 2
          @(negedge clk)
             nt =1'b0;      
-            #(`CYCLE*3)  // read x2 & y2
+            #(`CYCLE*2)  // read x2 & y2
                data_tmp_i2 = data_base[i+1];
                xi = data_tmp_i2[5:3];
                yi = data_tmp_i2[2:0];
-         @(posedge clk)
+         /*@(posedge clk)
             #(`CYCLE*2)  // close x2 & y2 
                xi = 3'bz; 
-               yi = 3'bz;
+               yi = 3'bz;*/
          // cycle 3
          @(negedge clk)
-            #(`CYCLE*3)  // read x3 & y3
+            #(`CYCLE*2)  // read x3 & y3
                data_tmp_i3 = data_base[i+2];
                xi = data_tmp_i3[5:3];
                yi = data_tmp_i3[2:0];
+		/*   
          @(posedge clk)
             #(`CYCLE*2)  // close x3 & y3 
                xi = 3'bz; 
-               yi = 3'bz;
+               yi = 3'bz;*/
          
          $display("Waiting for the rendering operation of the triangle points with:"); 
          $display("(x1, y1)=(%h, %h)",data_tmp_i1[5:3], data_tmp_i1[2:0]); 

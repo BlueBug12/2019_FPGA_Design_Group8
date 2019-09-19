@@ -4,7 +4,7 @@
 `define IN_LENGTH  6
 `define INFILE2    "expect.dat"
 `define OUT_LENGTH 28
-`define SDF_FILE   "triangle.sdf"
+//`define SDF_FILE   "triangle.sdf"
 
 module test;
 parameter INPUT_DATA = `INFILE1;
@@ -36,8 +36,8 @@ initial	$readmemb(INPUT_DATA,  data_base);
 initial	$readmemb(EXPECT_DATA,  data_base_expect);
 
 initial begin
-   $dumpvars();
-   $dumpfile("triangle.vcd");
+   //$dumpvars();
+   //$dumpfile("triangle.vcd");
    
    clk   = 1'b1;
    reset = 1'b0;

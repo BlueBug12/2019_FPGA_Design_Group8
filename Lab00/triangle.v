@@ -12,13 +12,12 @@ module triangle(clk, reset, nt, xi, yi, busy, po, xo, yo);
     
     reg busy;
     reg po;
-	reg jump;
     reg [2:0]xo;
     reg [2:0]yo;
 	reg [2:0]x[2:0];// x[0]==x[2](min)
 	reg [2:0]y[2:0];// y[0]==y[1](min)
-	reg [2:0]ans_x;
-	reg [2:0]ans_y;
+	reg [3:0]ans_x;
+	reg [3:0]ans_y;
 	reg [2:0]current_state;
 	reg [2:0]next_state;
 	reg [6:0]multiple1;
@@ -44,7 +43,7 @@ module triangle(clk, reset, nt, xi, yi, busy, po, xo, yo);
 			begin
 				po=0;
 				busy=0;
-				jump=0;
+				
 				next_state=INPUT1;
 			end
 			
@@ -53,17 +52,28 @@ module triangle(clk, reset, nt, xi, yi, busy, po, xo, yo);
 				if(nt)
 				begin
 					po=0;
+					busy=0;
 					x[0]=xi;
 					y[0]=yi;
+					xo=3'bz;
+					yo=3'bz;
+					ans_x[3]=0;
+					ans_y[3]=0;
 					next_state=INPUT2;
 				end
 				else
-					next_state=INPUT1;
+					begin
+						next_state=INPUT1;
+						po=0;
+						xo=3'bz;
+						yo=3'bz;
+					end
 				
 			end
 			
 			INPUT2:
 			begin
+				
 				x[1]=xi;
 				y[1]=yi;
 				busy=1;
@@ -74,45 +84,32 @@ module triangle(clk, reset, nt, xi, yi, busy, po, xo, yo);
 			begin
 				x[2]=xi;
 				y[2]=yi;
-				ans_x=x[0];
-				ans_y=y[0];
+				ans_x[2:0]=x[0];
+				ans_y[2:0]=y[0];
 				next_state=OUTPUT;
 			end
 			
 			OUTPUT:
 			begin
 				po=1;
-				//xo=x[0];
-				//yo=y[9];
-				xo=ans_x;
-				yo=ans_y;
-				multiple1={4'b0,(x[1]-ans_x)}*{4'b0,(y[2]-y[1])};
-				multiple2={4'b0,(ans_y-y[1])}*{4'b0,(x[1]-x[2])};
-				if(ans_x<=x[1]&&(multiple1>=multiple2))
-				begin
-					xo=ans_x;
-					yo=ans_y;
-					ans_x=ans_x+3'b1;
-				end
-				
-				else
-				begin
-					ans_x=x[0];
-					ans_y=ans_y+3'b1;
-					multiple1={4'b0,(x[1]-ans_x)}*{4'b0,(y[2]-y[1])};
-					multiple2={4'b0,(ans_y-y[1])}*{4'b0,(x[1]-x[2])};
-					if(ans_y<=y[2]&&(multiple1>=multiple2))
+				xo=ans_x[2:0];
+				yo=ans_y[2:0];
+
+				ans_x=ans_x+4'b1;
+				multiple1={4'b0,(x[1]-ans_x[2:0])}*{4'b0,(y[2]-y[1])};
+				multiple2={4'b0,(ans_y[2:0]-y[1])}*{4'b0,(x[1]-x[2])};
+				if(ans_x>{1'b0,x[1]}||(multiple1<multiple2))
 					begin
-						
-						xo=ans_x;
-						yo=ans_y;
+						ans_x={1'b0,x[0]};
+						ans_y=ans_y+4'b1;
+						multiple1={4'b0,(x[1]-ans_x[2:0])}*{4'b0,(y[2]-y[1])};
+						multiple2={4'b0,(ans_y[2:0]-y[1])}*{4'b0,(x[1]-x[2])};
+						if(ans_y>{1'b0,y[2]}||(multiple1<multiple2))
+							begin
+								next_state=INPUT1;
+								busy=0;
+							end
 					end
-					else
-					begin
-						next_state=INPUT1;
-					end
-					
-				end
 			end
 
 		endcase

@@ -4,7 +4,7 @@
 `define IN_LENGTH  6
 `define INFILE2    "expect.dat"
 `define OUT_LENGTH 28
-//`define SDF_FILE   "triangle.sdf"
+`define SDF_FILE   "triangle.sdf"
 
 module test;
 parameter INPUT_DATA = `INFILE1;
@@ -28,7 +28,7 @@ reg [5:0]  data_tmp_expect;
 reg [5:0]  data_tmp_i1, data_tmp_i2, data_tmp_i3;
 
 
-triangle top(clk, reset, nt, xi, yi, busy, po, xo, yo);
+triangle top(clk,reset,nt,xi,yi,busy,po,xo,yo);
 
 //initial $sdf_annotate(`SDF_FILE,top);
 
@@ -36,8 +36,8 @@ initial	$readmemb(INPUT_DATA,  data_base);
 initial	$readmemb(EXPECT_DATA,  data_base_expect);
 
 initial begin
-   //$dumpvars();
-   //$dumpfile("triangle.vcd");
+   $dumpvars();
+   $dumpfile("triangle.vcd");
    
    clk   = 1'b1;
    reset = 1'b0;
@@ -81,36 +81,35 @@ initial begin
          // cycle 1
          @(negedge clk)
             nt = 1'b1;      
-            #(`CYCLE*2)  // read x1 & y1
+            #(`CYCLE*3)  // read x1 & y1
                data_tmp_i1 = data_base[i];
                xi = data_tmp_i1[5:3];
                yi = data_tmp_i1[2:0];
-         /*@(posedge clk)
+         @(posedge clk)
             #(`CYCLE*2)  // close x1 & y1 
                xi = 3'bz; 
-               yi = 3'bz; */
+               yi = 3'bz; 
          // cycle 2
          @(negedge clk)
             nt =1'b0;      
-            #(`CYCLE*2)  // read x2 & y2
+            #(`CYCLE*3)  // read x2 & y2
                data_tmp_i2 = data_base[i+1];
                xi = data_tmp_i2[5:3];
                yi = data_tmp_i2[2:0];
-         /*@(posedge clk)
+         @(posedge clk)
             #(`CYCLE*2)  // close x2 & y2 
                xi = 3'bz; 
-               yi = 3'bz;*/
+               yi = 3'bz;
          // cycle 3
          @(negedge clk)
-            #(`CYCLE*2)  // read x3 & y3
+            #(`CYCLE*3)  // read x3 & y3
                data_tmp_i3 = data_base[i+2];
                xi = data_tmp_i3[5:3];
                yi = data_tmp_i3[2:0];
-		/*   
          @(posedge clk)
             #(`CYCLE*2)  // close x3 & y3 
                xi = 3'bz; 
-               yi = 3'bz;*/
+               yi = 3'bz;
          
          $display("Waiting for the rendering operation of the triangle points with:"); 
          $display("(x1, y1)=(%h, %h)",data_tmp_i1[5:3], data_tmp_i1[2:0]); 

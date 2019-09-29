@@ -77,14 +77,13 @@
 程式碼如下：
 ```
 if(ans_x+4'b1>{1'b0,x[1]}||(multipleX2<multipleY1))begin
-						ans_x<={1'b0,x[0]};
-						ans_y<=ans_y+4'b1;
-						if(ans_y=={1'b0,y[2]})
-						    busy<=0;
-				end
-				else
-				    ans_x<=ans_x+4'b1;
-			end
+	ans_x<={1'b0,x[0]};
+	ans_y<=ans_y+4'b1;
+	if(ans_y=={1'b0,y[2]})
+		busy<=0;
+	end
+else
+	ans_x<=ans_x+4'b1;
 
 ```
 這段程式碼的作用是從三角形的最左下角開示判斷座標點是否超出三角形邊界(以斜率判斷)，若沒有則往右移動一格繼續判斷下一個點是否超出邊界，反之，座標點則往上移動一格並回到最左邊重新開始判斷

@@ -31,28 +31,56 @@
 <details>
 <summary></summary>
 /'INIT state's output'/
-INIT: po = 0
-INIT: busy = 0
-INIT: ans_x = 4'bz
-INIT: ans_y = 4'bz
-INIT: counter = 2'b1
+ INIT: po = 0 
+ INIT: busy = 0 
+ INIT: ans_x = 4'bz
+ INIT: ans_y = 4'bz
+ INIT: counter = 2'b1
+ 
+ /'INPUT state's output'/
+ INPUT: po = 0 
+ INPUT: busy = 1 
+ INPUT: xo = 3'bz
+ INPUT: yo = 3'bz
+ INPUT: x[counter] = xi
+ INPUT: y[counter] = yi
+ INPUT: ans_x = {1'b0, x[0]}
+ INPUT: ans_y = {1'b0, y[0]}
+ INPUT: counter = counter + 1 
+ 
+ /'OUTPUT state's output'/
+ OUTPUT: po = 0;
+ OUTPUT: xo = ans_x[2:0]
+ OUTPUT: yo = ans_y[2:0]
+ 
+ /'INIT's Flow'/
+ INIT --> INPUT : nt = 1 
+ INIT --> INIT : nt = 0 
+ 
+ /'INPUT's FLOW'/
+ INPUT --> INPUT : counter < 3 
+ INPUT --> OUTPUT : counter >= 3
+ 
+ /'OUTPUT's FLOW'/
+ OUTPUT --> INIT : ans_y == {1'b0,y[2]}
+ OUTPUT --> OUTPUT
+ </details>
+ 
+其中 OUTPUT state 判斷的部份有點複雜，獨立拿出來介紹
+程式碼如下：
+```
+if(ans_x+4'b1>{1'b0,x[1]}||(multipleX2<multipleY1))begin
+						ans_x<={1'b0,x[0]};
+						ans_y<=ans_y+4'b1;
+						if(ans_y=={1'b0,y[2]})
+						    busy<=0;
+				end
+				else
+				    ans_x<=ans_x+4'b1;
+			end
 
-/'INPUT state's output'/
-INPUT: po = 0
-INPUT: busy = 1
-INPUT: xo = 3'bz
-INPUT: yo = 3'bz
-INPUT: x[counter] = xi
-INPUT: y[counter] = yi
-INPUT: ans_x = {1'b0, x[0]}
-INPUT: ans_y = {1'b0, y[0]}
-INPUT: counter = counter + 1
-
-/'OUTPUT state's output'/
-OUTPUT --> INIT : ans_y == {1'b0,y[2]}
-OUTPUT --> OUTPUT
-</details>
-
+```
+這段程式碼的作用是從三角形的最左下角開示判斷座標點是否超出三角形邊界，若沒有則往右移動一格繼續判斷下一個點是否超出邊界，反之，座標點則往上移動一格並回到最左邊重新開始判斷
 ### 模擬結果圖
 ![image](image/pass_message.PNG)
 

@@ -64,8 +64,10 @@ INPUT --> OUTPUT : counter >= 3
 OUTPUT --> INIT : ans_y == {1'b0,y[2]}
 OUTPUT --> OUTPUT
 </details>
+
 ### 模擬結果圖
 ![image](Lab00/image/pass_message.PNG)
+
 ### 模擬波形圖
 ![image](Lab00/image/wave_1.PNG)
 ![image](/Lab00/image/wave_2.PNG)

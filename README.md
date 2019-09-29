@@ -8,29 +8,18 @@
 ## 設計說明
 
 ### FSM State Diagram
-
-<img src='https://g.gravizo.com/svg?
- digraph G {
-   main -> parse -> execute;
-   main -> init;
-   main -> cleanup;
-   execute -> make_string;
-   execute -> printf
-   init -> make_string;
-   main -> printf;
-   execute -> compare;
- }
-'/>
-
-![Alt text](https://g.gravizo.com/svg?
+![Alt text](![Alt text](https://g.gravizo.com/source/<custom_mark>?<url_source_url_encoded>)
+<details> 
+<summary></summary>
+custom_mark10
   digraph G {
-    aize ="4,4";
+    size ="4,4";
     main [shape=box];
     main -> parse [weight=8];
     parse -> execute;
     main -> init [style=dotted];
     main -> cleanup;
-    execute -> { make_string; printf}
+    execute -> { make_string; printf};
     init -> make_string;
     edge [color=red];
     main -> printf [style=bold,label="100 times"];
@@ -38,7 +27,8 @@
     node [shape=box,style=filled,color=".7 .3 1.0"];
     execute -> compare;
   }
-)
+custom_mark10
+</details>
 ### 模擬結果圖
 ![image](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab00/image/pass_message.PNG)
 ![image](Lab00/image/pass_message.PNG)

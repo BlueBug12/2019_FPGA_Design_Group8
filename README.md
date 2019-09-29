@@ -11,4 +11,5 @@
 
 ### 模擬結果圖
 ![image](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab00/image/pass_message.PNG)
+![image](Lab00/image/pass_message.PNG)
 ### 模擬波形圖

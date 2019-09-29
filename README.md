@@ -8,7 +8,8 @@
 ## 設計說明
 
 ### FSM State Diagram
-![Alt text](![Alt text](https://g.gravizo.com/source/<custom_mark>?<url_source_url_encoded>)
+![Alt text](https://g.gravizo.com/source/<custom_mark>?<url_source_url_encoded>)
+
 <details> 
 <summary></summary>
 custom_mark10

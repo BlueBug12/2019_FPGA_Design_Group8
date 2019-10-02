@@ -1,0 +1,54 @@
+module RGB_LED(
+	input clk,
+	input rst,
+	output reg led4_b,
+	output reg led4_g,
+	output reg led4_r,
+	output reg led5_b,
+	output reg led5_g,
+	output reg led5_r
+	);
+reg [3:0]counter;
+always@(posedge clk or posedge rst)begin
+    if(rst)begin
+        counter<=4'b0;
+        led4_b<=0;
+        led4_g<=0;
+        led4_r<=0;
+        led5_b<=0;
+        led5_g<=0;
+        led5_r<=0;
+    end
+    else begin
+        case(counter)
+            4'd0:begin
+                led4_r<=1'b1;
+                led5_r<=1'b1;
+            end
+            4'd1:begin
+                led4_r<=1'b0;
+                led4_g<=1'b1;
+            end
+            
+            4'd6:begin
+                led4_r<=1'b1;
+            end
+            
+            4'd7:begin
+                led4_g<=1'b0;
+            end
+            
+            4'd8:begin
+                led5_r<=1'b0;
+                led5_g<=1'b1;
+            end
+            
+            4'd13:begin
+                led5_r<=1'b1;
+                counter<=4'b0;
+            end
+            
+        endcase
+	end
+end
+endmodule

@@ -20,8 +20,13 @@ always@(posedge clk or posedge rst)begin
         led5_r<=0;
     end
     else begin
+        counter<=counter+1'b1;
         case(counter)
             4'd0:begin
+                led4_g<=1'b0;
+                led4_b<=1'b0;
+                led5_g<=1'b0;
+                led5_b<=1'b0;
                 led4_r<=1'b1;
                 led5_r<=1'b1;
             end

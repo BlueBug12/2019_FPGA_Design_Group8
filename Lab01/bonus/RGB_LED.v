@@ -1,6 +1,14 @@
+
+`define STATE0 00
+`define STATE1 01
+`define STATE2 10
+`define STATE3 11
+
 module RGB_LED(
 	input clk,
 	input rst,
+    input button,
+    input [1:0 ]switch,
 	output reg led4_b,
 	output reg led4_g,
 	output reg led4_r,
@@ -9,6 +17,7 @@ module RGB_LED(
 	output reg led5_r
 	);
 reg [3:0]counter;
+reg [1:0] state, n_state;
 always@(posedge clk or posedge rst)begin
     if(rst)begin
         counter<=4'b0;
@@ -18,6 +27,7 @@ always@(posedge clk or posedge rst)begin
         led5_b<=0;
         led5_g<=0;
         led5_r<=0;
+        state <= 0;
     end
     else begin
         counter<=counter+1'b1;

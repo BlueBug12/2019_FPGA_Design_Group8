@@ -69,3 +69,7 @@
   * 調整黃燈區間時間(t3)
   * 長按btn1，4bit led會顯示長按的秒數，放開即完成新的秒數設定
   * LED1、LED2顯示為紅色
+  
+## Problem
+1. Vivado Tcl 編譯器會讀取blinky.xdc裡的指令，讓FPGA知道哪條訊號線為Clock，並透過buffer強化clk的穩定性(去顫)。
+2. 若沒有將Clock寫入blinky.xdc，會使得電路找不到clk來trigger flip-flop。

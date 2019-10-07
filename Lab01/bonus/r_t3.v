@@ -1,7 +1,7 @@
 `define INIT 0
 `define COUNT 1
 
-module(
+module r_t3(
     input clk_div,
     input rst,
     input button,
@@ -14,16 +14,17 @@ reg state;
 reg n_state;
 reg [3:0] counter;
 /* for state change, counter + 1 and state output*/
-always @(posedge clk_div or rst) begin
+always @(posedge clk_div or posedge rst) begin
 
     if(rst) begin
         t3 <= 4'b1;
         state <= 1'b0;
         counter <= 4'b1; // avoid t3 = 0
+        led <= 4'b0;
     end
     else begin
         state <= n_state;
-        case(n_stae)
+        case(n_state)
             `INIT: begin
                 t3 <= t3;
                 counter <= 4'b1;
@@ -39,7 +40,7 @@ always @(posedge clk_div or rst) begin
 end
 
 /* for n_state change */
-always(*) begin
+always @(*) begin
 
     case(state)
         `INIT: begin

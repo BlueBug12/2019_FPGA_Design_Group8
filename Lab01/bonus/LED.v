@@ -48,7 +48,7 @@ always @(posedge clk_div or posedge rst) begin
     end
     else begin
         state <= n_state;
-        counter <= (counter < (t1 + t2 + t3)) ? counter + 1 : 0;
+
         case (n_state)
             `INIT: begin
                 led4_r <= 1'b1;
@@ -59,6 +59,7 @@ always @(posedge clk_div or posedge rst) begin
                 led5_b <= 1'b0;
                 led <= counter;
                 l_or_r <= ~led4_r;
+                counter <= (counter < (t1 + t2 + t3)) ? counter + 1 : 0;
             end
             `R_R: begin
                 led4_r <= 1'b1;
@@ -69,6 +70,7 @@ always @(posedge clk_div or posedge rst) begin
                 led5_b <= 1'b0;
                 led <= counter;
                 l_or_r <= led4_r;
+                counter <= (counter < (t1 + t2 + t3)) ? counter + 1 : 0;
             end
             `R_G: begin
                 led4_r <= 1'b0;
@@ -79,6 +81,7 @@ always @(posedge clk_div or posedge rst) begin
                 led5_b <= 1'b0;
                 led <= counter;
                 l_or_r <= led4_r;
+                counter <= (counter < (t1 + t2 + t3)) ? counter + 1 : 0;
             end
             `R_Y: begin
                 led4_r <= 1'b1;
@@ -89,6 +92,7 @@ always @(posedge clk_div or posedge rst) begin
                 led5_b <= 1'b0;
                 led <= counter;
                 l_or_r <= led4_r;
+                counter <= (counter < (t1 + t2 + t3)) ? counter + 1 : 0;
             end
             `G_R: begin
                 led4_r <= 1'b1;
@@ -99,6 +103,7 @@ always @(posedge clk_div or posedge rst) begin
                 led5_b <= 1'b0;
                 led <= counter;
                 l_or_r <= led4_r;
+                counter <= (counter < (t1 + t2 + t3)) ? counter + 1 : 0;
             end
             `Y_R: begin
                 led4_r <= 1'b1;
@@ -109,6 +114,7 @@ always @(posedge clk_div or posedge rst) begin
                 led5_b <= 1'b0;
                 led <= counter;
                 l_or_r <= led4_r;
+                counter <= (counter < (t1 + t2 + t3)) ? counter + 1 : 0;
             end
             `SET_TIME: begin
                 led4_r <= 1'b0;
@@ -119,6 +125,7 @@ always @(posedge clk_div or posedge rst) begin
                 led5_b <= 1'b1;
                 led <= led_in;
                 l_or_r <= led4_r;
+                counter <= 0;
             end
             default: begin
                 led4_r <= 1'b1;
@@ -129,6 +136,7 @@ always @(posedge clk_div or posedge rst) begin
                 led5_b <= 1'b1;
                 led <= 4'b0;
                 l_or_r <= led4_r;
+                counter <= 0;
             end
         endcase
     end

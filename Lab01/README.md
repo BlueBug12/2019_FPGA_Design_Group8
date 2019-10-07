@@ -14,19 +14,19 @@
 
   從上面的表格我們可以發現，整個狀態的循環是以14秒為單位，因此counter 只需要能計數到14秒就可以了。
 ## 設計說明
-# FSM State Diagram
-![image](https://github.com/lesley880813/test/blob/master/stategraph.png?raw=true)
+### FSM State Diagram
+![image](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab01/img/stategraph.png)
 
   * 因為題目並未清楚說明，所以我們將第一個狀態設為兩個LED皆為紅燈
   * divider將原本125MHz的clk降為1Hz，並以此作為RGB_LED的clk
   > if (cnt == 125000000 - 1) begin<br>
-	>	cnt <= 27'd0;<br>
-	>	clk_div <= 'b1;//送出1Hz的訊號
-  >  end <br>
-  > else begin<br>
-	>	cnt <= cnt + 1;<br>
-	> clk_div <= 27'b0;//1秒還沒到
-	>	end
+        cnt <= 27'd0;<br>
+	clk_div <= 'b1;//送出1Hz的訊號
+  end <br>
+  else begin<br>
+	cnt <= cnt + 1;<br>
+	clk_div <= 27'b0;//1秒還沒到
+  end
 
 
   * 訊號counter會在每個clock edge時加1，接著我們只須根據現在的秒數，給定正確顏色的訊號即可

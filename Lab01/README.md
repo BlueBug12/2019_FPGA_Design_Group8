@@ -10,6 +10,6 @@
 
 ## 設計說明
 # FSM State Diagram
-![image](https://github.com/lesley880813/test/blob/master/stategraph.png?raw=true)
+![image](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab01/stategraph.png?raw=true)
 
 

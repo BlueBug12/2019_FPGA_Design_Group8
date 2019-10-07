@@ -31,7 +31,6 @@ module top(
     divider div_0(
     .clk    (clk),
     .rst    (rst),
-    .sw     (sw),
     .start  (start),
     .clk_div    (clk_div)
     );

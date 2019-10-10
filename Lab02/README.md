@@ -1,4 +1,4 @@
-# FPGA-based System Design - Lab01 HW
+# FPGA-based System Design - Lab02 HW
 
 ## 成員名單
 * E24066242劉祐誠

@@ -19,7 +19,7 @@ code:<br>
 
 ```python
 from graphviz import Digraph
-g = Digraph('G', filename='hello.png')
+g = Digraph('G', filename='fsm.png')
 g.node("RGB_LED","RGB_LED")
 g.node("reset","reset")
 g.node("++color","++color(chage color)")

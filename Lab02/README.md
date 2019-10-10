@@ -9,13 +9,17 @@
 透過PWM(pulse width modulation) Decoder的方式，使得 RGB LED有更豐富的色彩變化 ，並透過給予不同的 R、G、B time 來產生彩虹七色。
 ## 設計說明
 ## FSM State Diagram
-![FSM](img/FSM.png)
+
+![FSM](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab02/img/FSM.PNG)
 <details>
 <summary></summary>
-> tutorial: https://graphviz.readthedocs.io/en/stable/examples.html<br/>
-> code:<br/>
+
+<a href=https://graphviz.readthedocs.io/en/stable/examples.html>tutorial</a><br>
+code:<br>
+
+```python
 from graphviz import Digraph
-g = Digraph('G', filename='C:/Users/User/Desktop/hello.png')
+g = Digraph('G', filename='hello.png')
 g.node("RGB_LED","RGB_LED")
 g.node("reset","reset")
 g.node("++color","++color(chage color)")
@@ -24,11 +28,11 @@ g.edge("++color","RGB_LED",label="cnt!=2sec")
 g.edge("RGB_LED","reset",label="rst=1")
 g.edge("reset","RGB_LED",label="rst=0")
 g.view()
-
+```
 </details>
 
 ## Block Diagram
-![Block_Diagram](img/block_diagram.png)
+![Block_Diagram](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab02/img/block_diagram.PNG)
 
 在RGB_LED裡，分別有兩個計數器，`counter_256`以及`cnt`。訊號counter_256會重新切割出256個clock period為一新的週期。透過分配RGB三色在週期中的明暗比例，我們就完成了PWM的輸出效果。訊號cnt則是計算秒數，使得電路可以每兩秒變換一次輸出顏色。
 * 顏色變換: 紅->橙->黃->綠->藍->靛(偏白)->紫(偏粉紅)

@@ -1,0 +1,71 @@
+/'INIT state's output'/
+INIT: R_init = 0 \n G_init = 0
+INIT: B_init = 0
+INIT: ratio_rgb = 6'b0
+INIT: n_state = `RED
+
+/'RED state's output'/
+RED: R_init = 255
+RED: G_init = 0
+RED: B_init = 0
+RED: ratio_rgb = 6'b110000
+RED: n_state = `ORANGE
+
+ /'ORANGE state's output'/
+ORANGE:  R_init = 255
+ORANGE : G_init = 100
+ORANGE : B_init = 0
+ORANGE : ratio_rgb = 6'b110100
+ORANGE : n_state = `YELLOW
+
+ /'YELLOW state's output'/
+YELLOW: R_init = 255
+YELLOW: G_init = 255
+YELLOW: B_init = 0
+YELLOW: ratio_rgb = 6'b111100
+YELLOW: n_state = `GREEN
+
+ /'GREEN state's output'/
+GREEN: R_init = 0
+GREEN: G_init = 255
+GREEN: B_init = 0
+GREEN: ratio_rgb = 6'b001100
+GREEN: n_state = `BLUE
+
+ /'BLUE state's output'/
+BLUE: R_init = 0
+BLUE: G_init = 127
+BLUE: B_init = 255
+BLUE: ratio_rgb = 6'b000111
+BLUE: n_state = `INDIGO
+
+ /'INDIGO state's output'/
+INDIGO: R_init = 0
+INDIGO: G_init = 0
+INDIGO: B_init = 255
+INDIGO: ratio_rgb = 6'b000011
+INDIGO: n_state = `PURPLE
+ /'PURPLE state's output'/
+PURPLE: R_init = 127
+PURPLE: G_init = 0
+PURPLE: B_init = 255
+PURPLE: ratio_rgb = 6'b010011
+PURPLE: n_state = `RED
+
+ INIT    --> RED     : breath_done = 1
+ RED     --> ORANGE  : breath_done = 1
+ ORANGE  --> YELLOW  : breath_done = 1
+ YELLOW  --> GREEN   : breath_done = 1
+ GREEN   --> BLUE    : breath_done = 1
+ BLUE    --> INDIGO  : breath_done = 1
+ INDIGO  --> PURPLE  : breath_done = 1
+ PURPLE  --> RED     : breath_done = 1
+
+
+ INIT    --> INIT    : breath_done = 0
+ RED     --> RED     : breath_done = 0
+ ORANGE  --> ORANGE  : breath_done = 0
+ YELLOW  --> YELLOW  : breath_done = 0
+ GREEN   --> GREEN   : breath_done = 0
+ BLUE    --> BLUE    : breath_done = 0
+ INDIGO  --> INDIGO  : breath_done = 0

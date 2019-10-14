@@ -90,6 +90,8 @@ g.view()
 
 
 # Bonus-七色呼吸燈
+## FSM state diagram
+![image](./bonus/image/PWM_state.png)
 ## 設計架構圖
 ![image](./bonus/image/arch.png)
 

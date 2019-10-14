@@ -11,7 +11,7 @@
 ## 設計說明
 ## FSM State Diagram
 
-![FSM](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab02/img/FSM.PNG)
+![FSM](./program1/img/FSM.PNG)
 <details>
 <summary></summary>
 
@@ -33,7 +33,7 @@ g.view()
 </details>
 
 ## Block Diagram
-![Block_Diagram](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab02/img/block_diagram.PNG)
+![Block_Diagram](./program1/img/block_diagram.PNG)
 
 在RGB_LED裡，分別有兩個計數器，`counter_256`以及`cnt`。訊號counter_256會重新切割出256個clock period為一新的週期。透過分配RGB三色在週期中的明暗比例，我們就完成了PWM的輸出效果。訊號cnt則是計算秒數，使得電路可以每兩秒變換一次輸出顏色。
 * 顏色變換: 紅->橙->黃->綠->藍->靛(偏白)->紫(偏粉紅)
@@ -45,11 +45,10 @@ g.view()
 
 ## 設計說明
 ## FSM State Diagram
-![FSM](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab02/img/FSM2.PNG)
+![FSM](./program2/image/FSM.PNG)
 <details>
 <summary></summary>
 
-<a href=https://graphviz.readthedocs.io/en/stable/examples.html>tutorial</a><br>
 code:<br>
 
 ```python
@@ -85,6 +84,6 @@ g.view()
 </details>
 
 ## Block Diagram
-![Block_Diagram](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/master/Lab02/img/block_diagram2.PNG)
+![Block_Diagram](./program2/image/pg2_arch.png)
 
 架構與上一題大致相同，只是不須變換顏色，並增加一個breath電路。`breath.v`裡的counter會在`COUNT_UP`state的時候增加；`COUNT_DOWN`state的時候減少。接著讓LED的強弱透過PWM_decoder隨著這個counter變化`R_time = 255 - (3 * counter)`，我們就能得到呼吸燈的效果。

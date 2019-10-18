@@ -13,3 +13,9 @@
 * 約每隔兩秒變換一次顏色
 * Putty 上會顯示現在的顏色
 * 輸出順序: Red->Orange->Yellow->Green->Blue->Indigo->Purple
+
+## Block Diagram
+![problem1_BD](./images/problem1_BD.png)
+
+## Output Result (Putty)
+![problem1_result](./images/problem1_result.png)

@@ -1,0 +1,730 @@
+19:50:31 **** Build of project problem1_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+
+**** Build of configuration Debug for project problem1 ****
+
+Nothing to build for project problem1
+19:51:45 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ../../problem1_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): in function `_start':
+D:\FPGA\Lab03_problem1\Lab03_problem1.sdk\problem1_bsp\ps7_cortexa9_0\libsrc\standalone_v7_0\src/xil-crt0.S:138: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: problem1.elf] Error 1
+19:51:57 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+../src/led_rainow.c:21:1: error: unknown type name 'XGPIO'; did you mean 'XGPIO_H'?
+ XGPIO LED_G_Gpio;
+ ^~~~~
+ XGPIO_H
+../src/led_rainow.c: In function 'main':
+../src/led_rainow.c:37:2: error: 'LED_Status_R' undeclared (first use in this function); did you mean 'LED_Status'?
+  LED_Status_R = XGpio_Initialize(&LED_R_Gpio, LED_DEVICE_ID_R);
+  ^~~~~~~~~~~~
+  LED_Status
+../src/led_rainow.c:37:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/led_rainow.c:38:2: error: 'LED_Status_G' undeclared (first use in this function); did you mean 'LED_Status'?
+  LED_Status_G = XGpio_Initialize(&LED_G_Gpio, LED_DEVICE_ID_G);
+  ^~~~~~~~~~~~
+  LED_Status
+../src/led_rainow.c:38:34: warning: passing argument 1 of 'XGpio_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  LED_Status_G = XGpio_Initialize(&LED_G_Gpio, LED_DEVICE_ID_G);
+                                  ^~~~~~~~~~~
+In file included from ../src/led_rainow.c:10:
+../../problem1_bsp/ps7_cortexa9_0/include/xgpio.h:169:29: note: expected 'XGpio *' {aka 'struct <anonymous> *'} but argument is of type 'int *'
+ int XGpio_Initialize(XGpio *InstancePtr, u16 DeviceId);
+                      ~~~~~~~^~~~~~~~~~~
+../src/led_rainow.c:39:2: error: 'LED_Status_B' undeclared (first use in this function); did you mean 'LED_Status'?
+  LED_Status_B = XGpio_Initialize(&LED_B_Gpio, LED_DEVICE_ID_B);
+  ^~~~~~~~~~~~
+  LED_Status
+../src/led_rainow.c:46:25: warning: passing argument 1 of 'XGpio_SetDataDirection' from incompatible pointer type [-Wincompatible-pointer-types]
+  XGpio_SetDataDirection(&LED_G_Gpio, 1, 0x0);
+                         ^~~~~~~~~~~
+In file included from ../src/led_rainow.c:10:
+../../problem1_bsp/ps7_cortexa9_0/include/xgpio.h:177:36: note: expected 'XGpio *' {aka 'struct <anonymous> *'} but argument is of type 'int *'
+ void XGpio_SetDataDirection(XGpio *InstancePtr, unsigned Channel,
+                             ~~~~~~~^~~~~~~~~~~
+../src/led_rainow.c:52:25: error: 'LED_Gpio' undeclared (first use in this function); did you mean 'LED_B_Gpio'?
+    XGpio_DiscreteWrite(&LED_Gpio, 1, led_data);
+                         ^~~~~~~~
+                         LED_B_Gpio
+../src/led_rainow.c:52:38: error: 'led_data' undeclared (first use in this function); did you mean 'led_data_b'?
+    XGpio_DiscreteWrite(&LED_Gpio, 1, led_data);
+                                      ^~~~~~~~
+                                      led_data_b
+../src/led_rainow.c:34:6: warning: variable 'led_data_b' set but not used [-Wunused-but-set-variable]
+  u32 led_data_b = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:33:6: warning: variable 'led_data_g' set but not used [-Wunused-but-set-variable]
+  u32 led_data_g = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:32:6: warning: variable 'led_data_r' set but not used [-Wunused-but-set-variable]
+  u32 led_data_r = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:26:6: warning: unused variable 'LED_Status' [-Wunused-variable]
+  int LED_Status;
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/led_rainow.o] Error 1
+19:52:45 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+../src/led_rainow.c:21:1: error: unknown type name 'XGPIO'; did you mean 'XGPIO_H'?
+ XGPIO LED_G_Gpio;
+ ^~~~~
+ XGPIO_H
+../src/led_rainow.c: In function 'main':
+../src/led_rainow.c:26:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'R'
+  int LED_Status R,LED_Status G,LED_Status B;
+                 ^
+../src/led_rainow.c:26:17: error: 'R' undeclared (first use in this function)
+../src/led_rainow.c:26:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/led_rainow.c:26:19: error: 'LED_Status' undeclared (first use in this function); did you mean 'XStatus'?
+  int LED_Status R,LED_Status G,LED_Status B;
+                   ^~~~~~~~~~
+                   XStatus
+../src/led_rainow.c:26:18: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  int LED_Status R,LED_Status G,LED_Status B;
+                  ^
+../src/led_rainow.c:26:29: error: expected ';' before 'G'
+  int LED_Status R,LED_Status G,LED_Status B;
+                             ^~
+                             ;
+../src/led_rainow.c:37:2: error: 'LED_Status_R' undeclared (first use in this function); did you mean 'XStatus'?
+  LED_Status_R = XGpio_Initialize(&LED_R_Gpio, LED_DEVICE_ID_R);
+  ^~~~~~~~~~~~
+  XStatus
+../src/led_rainow.c:38:2: error: 'LED_Status_G' undeclared (first use in this function); did you mean 'XStatus'?
+  LED_Status_G = XGpio_Initialize(&LED_G_Gpio, LED_DEVICE_ID_G);
+  ^~~~~~~~~~~~
+  XStatus
+../src/led_rainow.c:38:34: warning: passing argument 1 of 'XGpio_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  LED_Status_G = XGpio_Initialize(&LED_G_Gpio, LED_DEVICE_ID_G);
+                                  ^~~~~~~~~~~
+In file included from ../src/led_rainow.c:10:
+../../problem1_bsp/ps7_cortexa9_0/include/xgpio.h:169:29: note: expected 'XGpio *' {aka 'struct <anonymous> *'} but argument is of type 'int *'
+ int XGpio_Initialize(XGpio *InstancePtr, u16 DeviceId);
+                      ~~~~~~~^~~~~~~~~~~
+../src/led_rainow.c:39:2: error: 'LED_Status_B' undeclared (first use in this function); did you mean 'XStatus'?
+  LED_Status_B = XGpio_Initialize(&LED_B_Gpio, LED_DEVICE_ID_B);
+  ^~~~~~~~~~~~
+  XStatus
+../src/led_rainow.c:46:25: warning: passing argument 1 of 'XGpio_SetDataDirection' from incompatible pointer type [-Wincompatible-pointer-types]
+  XGpio_SetDataDirection(&LED_G_Gpio, 1, 0x0);
+                         ^~~~~~~~~~~
+In file included from ../src/led_rainow.c:10:
+../../problem1_bsp/ps7_cortexa9_0/include/xgpio.h:177:36: note: expected 'XGpio *' {aka 'struct <anonymous> *'} but argument is of type 'int *'
+ void XGpio_SetDataDirection(XGpio *InstancePtr, unsigned Channel,
+                             ~~~~~~~^~~~~~~~~~~
+../src/led_rainow.c:52:25: error: 'LED_Gpio' undeclared (first use in this function); did you mean 'LED_B_Gpio'?
+    XGpio_DiscreteWrite(&LED_Gpio, 1, led_data);
+                         ^~~~~~~~
+                         LED_B_Gpio
+../src/led_rainow.c:52:38: error: 'led_data' undeclared (first use in this function); did you mean 'led_data_b'?
+    XGpio_DiscreteWrite(&LED_Gpio, 1, led_data);
+                                      ^~~~~~~~
+                                      led_data_b
+../src/led_rainow.c:34:6: warning: variable 'led_data_b' set but not used [-Wunused-but-set-variable]
+  u32 led_data_b = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:33:6: warning: variable 'led_data_g' set but not used [-Wunused-but-set-variable]
+  u32 led_data_g = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:32:6: warning: variable 'led_data_r' set but not used [-Wunused-but-set-variable]
+  u32 led_data_r = 0x0;
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/led_rainow.o] Error 1
+19:53:34 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+../src/led_rainow.c:21:1: error: unknown type name 'XGPIO'; did you mean 'XGPIO_H'?
+ XGPIO LED_G_Gpio;
+ ^~~~~
+ XGPIO_H
+../src/led_rainow.c: In function 'main':
+../src/led_rainow.c:38:34: warning: passing argument 1 of 'XGpio_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  LED_Status_G = XGpio_Initialize(&LED_G_Gpio, LED_DEVICE_ID_G);
+                                  ^~~~~~~~~~~
+In file included from ../src/led_rainow.c:10:
+../../problem1_bsp/ps7_cortexa9_0/include/xgpio.h:169:29: note: expected 'XGpio *' {aka 'struct <anonymous> *'} but argument is of type 'int *'
+ int XGpio_Initialize(XGpio *InstancePtr, u16 DeviceId);
+                      ~~~~~~~^~~~~~~~~~~
+../src/led_rainow.c:46:25: warning: passing argument 1 of 'XGpio_SetDataDirection' from incompatible pointer type [-Wincompatible-pointer-types]
+  XGpio_SetDataDirection(&LED_G_Gpio, 1, 0x0);
+                         ^~~~~~~~~~~
+In file included from ../src/led_rainow.c:10:
+../../problem1_bsp/ps7_cortexa9_0/include/xgpio.h:177:36: note: expected 'XGpio *' {aka 'struct <anonymous> *'} but argument is of type 'int *'
+ void XGpio_SetDataDirection(XGpio *InstancePtr, unsigned Channel,
+                             ~~~~~~~^~~~~~~~~~~
+../src/led_rainow.c:52:25: error: 'LED_Gpio' undeclared (first use in this function); did you mean 'LED_B_Gpio'?
+    XGpio_DiscreteWrite(&LED_Gpio, 1, led_data);
+                         ^~~~~~~~
+                         LED_B_Gpio
+../src/led_rainow.c:52:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/led_rainow.c:52:38: error: 'led_data' undeclared (first use in this function); did you mean 'led_data_b'?
+    XGpio_DiscreteWrite(&LED_Gpio, 1, led_data);
+                                      ^~~~~~~~
+                                      led_data_b
+../src/led_rainow.c:34:6: warning: variable 'led_data_b' set but not used [-Wunused-but-set-variable]
+  u32 led_data_b = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:33:6: warning: variable 'led_data_g' set but not used [-Wunused-but-set-variable]
+  u32 led_data_g = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:32:6: warning: variable 'led_data_r' set but not used [-Wunused-but-set-variable]
+  u32 led_data_r = 0x0;
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/led_rainow.o] Error 1
+19:53:47 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+../src/led_rainow.c: In function 'main':
+../src/led_rainow.c:52:25: error: 'LED_Gpio' undeclared (first use in this function); did you mean 'LED_B_Gpio'?
+    XGpio_DiscreteWrite(&LED_Gpio, 1, led_data);
+                         ^~~~~~~~
+                         LED_B_Gpio
+../src/led_rainow.c:52:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/led_rainow.c:52:38: error: 'led_data' undeclared (first use in this function); did you mean 'led_data_b'?
+    XGpio_DiscreteWrite(&LED_Gpio, 1, led_data);
+                                      ^~~~~~~~
+                                      led_data_b
+../src/led_rainow.c:34:6: warning: variable 'led_data_b' set but not used [-Wunused-but-set-variable]
+  u32 led_data_b = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:33:6: warning: variable 'led_data_g' set but not used [-Wunused-but-set-variable]
+  u32 led_data_g = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:32:6: warning: variable 'led_data_r' set but not used [-Wunused-but-set-variable]
+  u32 led_data_r = 0x0;
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/led_rainow.o] Error 1
+19:54:32 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+../src/led_rainow.c: In function 'main':
+../src/led_rainow.c:52:40: error: 'led_data' undeclared (first use in this function); did you mean 'led_data_b'?
+    XGpio_DiscreteWrite(&LED_R_Gpio, 1, led_data);
+                                        ^~~~~~~~
+                                        led_data_b
+../src/led_rainow.c:52:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/led_rainow.c:34:6: warning: variable 'led_data_b' set but not used [-Wunused-but-set-variable]
+  u32 led_data_b = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:33:6: warning: variable 'led_data_g' set but not used [-Wunused-but-set-variable]
+  u32 led_data_g = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:32:6: warning: variable 'led_data_r' set but not used [-Wunused-but-set-variable]
+  u32 led_data_r = 0x0;
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/led_rainow.o] Error 1
+19:55:01 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+../src/led_rainow.c: In function 'main':
+../src/led_rainow.c:52:40: error: 'led_data' undeclared (first use in this function); did you mean 'led_data_b'?
+    XGpio_DiscreteWrite(&LED_R_Gpio, 1, led_data);
+                                        ^~~~~~~~
+                                        led_data_b
+../src/led_rainow.c:52:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/led_rainow.c:34:6: warning: variable 'led_data_b' set but not used [-Wunused-but-set-variable]
+  u32 led_data_b = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:33:6: warning: variable 'led_data_g' set but not used [-Wunused-but-set-variable]
+  u32 led_data_g = 0x0;
+      ^~~~~~~~~~
+../src/led_rainow.c:32:6: warning: variable 'led_data_r' set but not used [-Wunused-but-set-variable]
+  u32 led_data_r = 0x0;
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/led_rainow.o] Error 1
+19:55:43 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31540	   1592	  23320	  56452	   dc84	problem1.elf
+Finished building: problem1.elf.size
+ 
+19:57:45 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31540	   1592	  23320	  56452	   dc84	problem1.elf
+Finished building: problem1.elf.size
+ 
+19:58:17 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:59:16 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31540	   1592	  23320	  56452	   dc84	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:03:45 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:03:51 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:05:56 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31476	   1592	  23320	  56388	   dc44	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:06:05 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31476	   1592	  23320	  56388	   dc44	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:11:55 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:12:04 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:13:06 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:14:38 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:15:00 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:15:04 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:16:49 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:17:12 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:17:25 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:18:07 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:18:37 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:20:51 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:20:56 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:21:55 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:26:21 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:27:30 **** Auto Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/led_rainow.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led_rainow.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../problem1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led_rainow.d" -MT"src/led_rainow.o" -o "src/led_rainow.o" "../src/led_rainow.c"
+Finished building: ../src/led_rainow.c
+ 
+Building target: problem1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../problem1_bsp/ps7_cortexa9_0/lib -o "problem1.elf"  ./src/led_rainow.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: problem1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size problem1.elf  |tee "problem1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31604	   1592	  23320	  56516	   dcc4	problem1.elf
+Finished building: problem1.elf.size
+ 
+20:27:38 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:28:40 **** Incremental Build of configuration Debug for project problem1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

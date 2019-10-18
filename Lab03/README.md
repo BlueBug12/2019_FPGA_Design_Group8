@@ -15,7 +15,7 @@
 * 輸出順序: Red->Orange->Yellow->Green->Blue->Indigo->Purple
 
 ## Block Diagram
-![problem1_BD](./images/problem1_BD.png)
+![problem1_BD](./images/problem1_BD.PNG)
 
 ## Output Result (Putty)
-![problem1_result](./images/problem1_result.png)
+![problem1_result](./images/problem1_result.PNG)

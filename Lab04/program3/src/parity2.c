@@ -1,12 +1,12 @@
 
 
 /***************************** Include Files *******************************/
-#include "parity.h"
+#include "parity2.h"
 
 /************************** Function Definitions ***************************/
-u32 parity(UINTPTR baseAddr, u32 data){
+u32 parity2(UINTPTR baseAddr, u32 data){
 	u32 result;
-	PARITY_mWriteReg(baseAddr, 0, data);
-	result = PARITY_mReadReg (baseAddr, 4);
+	PARITY2_mWriteReg(baseAddr, 0, data);
+	result = PARITY2_mReadReg (baseAddr, 4);
 	return result;
 }

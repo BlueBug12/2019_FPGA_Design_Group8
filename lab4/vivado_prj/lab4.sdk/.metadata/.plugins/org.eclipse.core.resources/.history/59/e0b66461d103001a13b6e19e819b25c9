@@ -1,0 +1,20 @@
+
+
+/***************************** Include Files *******************************/
+#include "hash.h"
+
+/************************** Function Definitions ***************************/
+u64 hash(UINTPTR baseAddr, unsigned char *str) {
+
+	u32 hash = 100;
+	u32 out;
+	HASH_mWriteReg(baseAddr, 0, 5381);
+	HASH_mWriteReg(baseAddr, 4, hash);
+	/*u32 c;
+	while (c = *(str++)){
+	HASH_mWriteReg(baseAddr, 0, c);
+
+	}*/
+	u64 answer=HASH_mReadReg64(baseAddr, 8);
+    return answer;
+}

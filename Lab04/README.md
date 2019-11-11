@@ -12,9 +12,9 @@
 * combinational logic
 * 從sort_8 divide 成 sort_4 再 divide 為sort_2
 * 使用2個slave register
-### Block Diagram
+#### Block Diagram
 * [block diagram](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/yao/lab4/image/problem2＿bd.png)
-### Output Result (Putty)
+#### Output Result (Putty)
 * [執行結果](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/yao/lab4/image/sorting.png)
 ### Program3:
 * 使用 __odd parity__ 來實作

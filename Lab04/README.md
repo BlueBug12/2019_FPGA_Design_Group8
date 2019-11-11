@@ -16,6 +16,10 @@
 * [block diagram](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/yao/lab4/image/problem2＿bd.png)
 #### Output Result (Putty)
 * [執行結果](https://github.com/BlueBug12/2019_FPGA_Design_Group8/blob/yao/lab4/image/sorting.png)
+### Problem 3
+* combinaltional logic
+* 使用$signed()將8bit的數值做signed extension 做運算
+* 結果會在16bit內所以用16bit輸出answer
 ### Program3:
 * 使用 __odd parity__ 來實作
 * 基本上就是將 _32bits_ 的data兩兩做 __xor__ 運算，因為是odd parity所以最後再加上一個inverter

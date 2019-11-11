@@ -34,7 +34,7 @@
 * 依據 _r_time_、_g_time_、_b_time_ 的值決定在每256個clock cicle的區間，有多少比例的 _R_、_G_、_B_ 輸出為True
 
 ## Block Diagram
-![block_diagram](./image/block_diagram.PNG)
+![block_diagram](./image/block_diagram.png)
 
 ## Terminal
-![putty](./image/out.PNG)
+![putty](./image/out.png)

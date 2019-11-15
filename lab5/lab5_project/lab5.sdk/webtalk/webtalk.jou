@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Thu Nov  7 20:29:38 2019
+# Process ID: 12378
+# Current directory: /home/yao/Class/FPGA/project/lab5/lab5.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/yao/Class/FPGA/project/lab5/lab5.sdk/webtalk/webtalk.log
+# Journal file: /home/yao/Class/FPGA/project/lab5/lab5.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

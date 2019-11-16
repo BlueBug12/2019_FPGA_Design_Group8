@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:/home/yao/Class/FPGA/project/lab5/lab5.srcs/constrs_1/new/design_1_wrapper.xdc rfile:../../../lab5.srcs/constrs_1/new/design_1_wrapper.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_1_i/processor_0/inst/n_state[0]} {design_1_i/processor_0/inst/n_state[1]}]]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+connect_debug_port u_ila_0/probe4 [get_nets [list {design_1_i/processor_0/inst/state[0]} {design_1_i/processor_0/inst/state[1]}]]

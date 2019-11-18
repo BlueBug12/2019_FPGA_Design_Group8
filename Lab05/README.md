@@ -9,7 +9,10 @@
 * mem256X32.v
   * 256個32bits reg的block memory
   * 依據signal `write_enable`決定寫入還是讀取
-
+  
+* memory_ctrl.v
+  * 控制memory中的data傳遞
+ 
 * mux.v
   * 由signal `ps_or_pl` 決定data由AXI CPU或Processor傳遞
 

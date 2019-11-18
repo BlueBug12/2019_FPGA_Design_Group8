@@ -1,0 +1,12 @@
+
+
+/***************************** Include Files *******************************/
+#include "sorting.h"
+
+/************************** Function Definitions ***************************/
+u32 sorting(UINTPTR baseAddr,u32 data){
+	SORTING_mWriteReg(baseAddr, 0, data);
+	return SORTING_mReadReg(baseAddr, 4);
+
+
+}

@@ -53,12 +53,18 @@
  </code></pre>
 
    * IDLE:閒置
-   * INIT:讀取`in_data`八個數字的資料(皆存在memory 255 的位置)
+   * INIT:讀取`in_data`八個數字的資料
    * IF:  從memory讀取instruction
    * ID:  delay一個cycle，讓EXE能讀到正確指令
    * EXE: 依據讀到的op code執行運算
+ #### BRAM
+  * input data 每個數字訂為4bits，兩個矩陣的運算有8個數字，因此總共需8 * 4=32bits，並將input data 放入0xff 位置
+  * instruction 則從　0x0 依序寫入
+  
  #### block diagram
  ![bd](./img/bd.png)
 
  #### output result
  ![output](./img/output.png)
+ 
+

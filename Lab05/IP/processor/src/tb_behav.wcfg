@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="835666666fs"></ZoomStartTime>
+      <ZoomEndTime time="1032866667fs"></ZoomEndTime>
+      <Cursor1Time time="925867000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="223"></NameColumnWidth>
+      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject type="logic" fp_name="/tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/start">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/w_en">
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/addr">
+      <obj_property name="ElementShortName">addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/out_data">
+      <obj_property name="ElementShortName">out_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/in_data">
+      <obj_property name="ElementShortName">in_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">in_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/pc">
+      <obj_property name="ElementShortName">pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/state">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/n_state">
+      <obj_property name="ElementShortName">n_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">n_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/a1">
+      <obj_property name="ElementShortName">a1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a1[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/a2">
+      <obj_property name="ElementShortName">a2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a2[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/a3">
+      <obj_property name="ElementShortName">a3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a3[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/a4">
+      <obj_property name="ElementShortName">a4[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a4[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/b1">
+      <obj_property name="ElementShortName">b1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b1[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/b2">
+      <obj_property name="ElementShortName">b2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b2[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/b3">
+      <obj_property name="ElementShortName">b3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b3[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/p1/b4">
+      <obj_property name="ElementShortName">b4[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b4[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/m1/mem">
+      <obj_property name="ElementShortName">mem[0:255][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:255][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Nov  7 17:28:36 2019
+# Process ID: 32347
+# Current directory: /home/yao/Class/FPGA/project/lab5/lab5.runs/design_1_mux_0_0_synth_1
+# Command line: vivado -log design_1_mux_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mux_0_0.tcl
+# Log file: /home/yao/Class/FPGA/project/lab5/lab5.runs/design_1_mux_0_0_synth_1/design_1_mux_0_0.vds
+# Journal file: /home/yao/Class/FPGA/project/lab5/lab5.runs/design_1_mux_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_mux_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/yao/Class/FPGA/IP/lab5'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/yao/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top design_1_mux_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 32483 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:08:19 . Memory (MB): peak = 1383.336 ; gain = 0.000 ; free physical = 163 ; free virtual = 839
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_mux_0_0' [/home/yao/Class/FPGA/project/lab5/lab5.srcs/sources_1/bd/design_1/ip/design_1_mux_0_0_1/synth/design_1_mux_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'mux' [/home/yao/Class/FPGA/project/lab5/lab5.srcs/sources_1/bd/design_1/ipshared/6787/src/mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (1#1) [/home/yao/Class/FPGA/project/lab5/lab5.srcs/sources_1/bd/design_1/ipshared/6787/src/mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mux_0_0' (2#1) [/home/yao/Class/FPGA/project/lab5/lab5.srcs/sources_1/bd/design_1/ip/design_1_mux_0_0_1/synth/design_1_mux_0_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:08:21 . Memory (MB): peak = 1427.977 ; gain = 44.641 ; free physical = 175 ; free virtual = 853
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:08:22 . Memory (MB): peak = 1427.977 ; gain = 44.641 ; free physical = 151 ; free virtual = 885
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:08:22 . Memory (MB): peak = 1427.977 ; gain = 44.641 ; free physical = 151 ; free virtual = 885
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1

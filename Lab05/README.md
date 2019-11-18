@@ -46,9 +46,9 @@
 
     * IDLE:閒置
     * INIT:讀取`in_data`八個數字的資料(皆存在memory 255 的位置)
-    * IF:從memory讀取instruction
-    * ID:delay一個cycle，讓EXE能讀到正確指令
-    * EXE:依據讀到的op code執行運算
+    * IF:  從memory讀取instruction
+    * ID:  delay一個cycle，讓EXE能讀到正確指令
+    * EXE: 依據讀到的op code執行運算
  #### block diagram
  ![bd](./img/bd.png)
 

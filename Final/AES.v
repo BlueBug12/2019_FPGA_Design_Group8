@@ -1,79 +1,118 @@
 //128bits
 //sequencial circuit
-`define ROUND=4'd9
+
+`define INIT 4'b0000
+`define READ 4'b0001
+`define ADD_ROUND_KEY 4'b0010
+`define SUB_BYTES 4'b0011
+`define SHIFT_ROWS 4'b0100
+`define MIX_COLUMNS 4'b0101
+`define DONE 4'b0110
 
 module SubBytes(
   input clk,
   input rst,
-  input [7:0]data[15:0],
-  input [7:0]key[15:0],
+  input [127:0]data,
+  input [127:0]key,
   input read_enable,
-  output [7:0]out_data[15:0],
+  output [127:0]out_data,
   output done
   );
-  parameter INIT = 4'b0000;
-  parameter READ = 4'b0001;
-  //parameter ROUND_KEY_GENERATE = 4'b0010;
-	parameter ADD_ROUND_KEY = 4'b0010;
-  parameter SUB_BYTES = 4'b0011;
-  parameter SHIFT_ROWS= 4'b0100;
-  parameter MIX_COLUMS= 4'b0101;
-	parameter DONE = 4'b0110;
+  wire [7:0]test[15:0];
+  wire [7:0]key_operation[3:0];
+  //wire [7:0]stest_sbox[3:0];
 
-  reg [1:0]current_state;
-  reg [1:0]next_state;
+  reg [3:0]current_state;
+  reg [3:0]next_state;
   reg [7:0]s_box[255:0];
-  reg [7:0]Rcon[2:0];
-  reg [3:0]counter;//record how many times loop excuted
+  reg [7:0]Rcon[8:0];
   reg [7:0]round_key[15:0];
-  //reg [7:0]cipherkey[15:0];
   reg [7:0]fourth_column_key[3:0];
-  reg [7:0]out_data[15:0];
-  //reg key_done;
+  reg [127:0]out_data;
+  
+  reg [3:0]rounds;//record how many times loop excuted
   reg done;
-
+  integer index;
+  
+ // assign temp_rcon=Rcon[rounds];
+  assign key_operation[0]=round_key[0]^(s_box[fourth_column_key[1]]^Rcon[rounds]);
+  assign key_operation[1]=round_key[1]^(s_box[fourth_column_key[2]]);
+  assign key_operation[2]=round_key[2]^(s_box[fourth_column_key[3]]);
+  assign key_operation[3]=round_key[3]^(s_box[fourth_column_key[0]]);
+  assign test3=Rcon[rounds];
+  
+ /*
+  assign stest_sbox[0]=s_box[fourth_column_key[1]];
+  assign stest_sbox[1]=s_box[fourth_column_key[2]];
+  assign stest_sbox[2]=s_box[fourth_column_key[3]];
+  assign stest_sbox[3]=s_box[fourth_column_key[0]];*/
+  
+  assign test[0]=out_data[7:0];
+  assign test[1]=out_data[15:8];
+  assign test[2]=out_data[23:16];
+  assign test[3]=out_data[31:24];
+  assign test[4]=out_data[39:32];
+  assign test[5]=out_data[47:40];
+  assign test[6]=out_data[55:48];
+  assign test[7]=out_data[63:56];
+  assign test[8]=out_data[71:64];
+  assign test[9]=out_data[79:72];
+  assign test[10]=out_data[87:80];
+  assign test[11]=out_data[95:88];
+  assign test[12]=out_data[103:96];
+  assign test[13]=out_data[111:104];
+  assign test[14]=out_data[119:112];
+  assign test[15]=out_data[127:120];
+  
   always@(posedge clk or posedge rst)
 		begin
 			if(rst)
-				current_state<=INIT;
+				current_state<= `INIT;
 			else
 				current_state<=next_state;
 		end
+		
   always@(*) begin
     case(current_state)
-      INIT:begin
-        next_state=(read_enable)? READ:INIT;
+      `INIT:begin
+        if(read_enable)
+            next_state=`READ;
+        else
+            next_state=`INIT;
       end
 
-      READ:begin
-        next_state=ADD_ROUND_KEY;
+      `READ:begin
+        next_state=`ADD_ROUND_KEY;
       end
 
-      ADD_ROUND_KEY:begin
-        next_state=SUB_BYTES;
+      `ADD_ROUND_KEY:begin
+        next_state=`SUB_BYTES;
       end
 
-      SUB_BYTES:begin
-        next_state=SHIFT_ROWS;
+      `SUB_BYTES:begin
+        next_state=`SHIFT_ROWS;
       end
 
-      SHIFT_ROWS:begin
-        next_state=DONE;
+      `SHIFT_ROWS:begin
+        next_state=`MIX_COLUMNS;
       end
 
-      MIX_COLUMS:begin
-
+      `MIX_COLUMNS:begin
+        if(rounds==4'd9)
+            next_state=`DONE;
+         else
+            next_state=`ADD_ROUND_KEY;
       end
-      DONE:begin
-
+      `DONE:begin
+           
       end
     endcase
   end
   always@(posedge clk)begin
     case(current_state)
-      INIT:begin
-        counter<=4'b0;
-        //key_done<=0;
+      `INIT:begin
+        rounds<=4'b0;
+        done<=0;
         Rcon[0]<=8'h01;
         Rcon[1]<=8'h02;
         Rcon[2]<=8'h04;
@@ -346,112 +385,89 @@ module SubBytes(
 
 
       end
-      READ:begin
-        round_key[0]<=key[0];
-        round_key[1]<=key[1];
-        round_key[2]<=key[2];
-        round_key[3]<=key[3];
-        round_key[4]<=key[4];
-        round_key[5]<=key[5];
-        round_key[6]<=key[6];
-        round_key[7]<=key[7];
-        round_key[8]<=key[8];
-        round_key[9]<=key[9];
-        round_key[10]<=key[10];
-        round_key[11]<=key[11];
-        round_key[12]<=key[12];
-        round_key[13]<=key[13];
-        round_key[14]<=key[14];
-        round_key[15]<=key[15];
-        
-        fourth_column_key[0]<=key[3];
-        fourth_column_key[1]<=key[7];
-        fourth_column_key[2]<=key[11];
-        fourth_column_key[3]<=key[15];
-        
-        out_data[0]<=data[0];
-        out_data[1]<=data[1];
-        out_data[2]<=data[2];
-        out_data[3]<=data[3];
-        out_data[4]<=data[4];
-        out_data[5]<=data[5];
-        out_data[6]<=data[6];
-        out_data[7]<=data[7];
-        out_data[8]<=data[8];
-        out_data[9]<=data[9];
-        out_data[10]<=data[10];
-        out_data[11]<=data[11];
-        out_data[12]<=data[12];
-        out_data[13]<=data[13];
-        out_data[14]<=data[14];
-        out_data[15]<=data[15];
+      `READ:begin
+
+        round_key[0]<=key[7:0];
+        round_key[1]<=key[15:8];
+        round_key[2]<=key[23:16];
+        round_key[3]<=key[31:24];
+        round_key[4]<=key[39:32];
+        round_key[5]<=key[47:40];
+        round_key[6]<=key[55:48];
+        round_key[7]<=key[63:56];
+        round_key[8]<=key[71:64];
+        round_key[9]<=key[79:72];
+        round_key[10]<=key[87:80];
+        round_key[11]<=key[95:88];
+        round_key[12]<=key[103:96];
+        round_key[13]<=key[111:104];
+        round_key[14]<=key[119:112];
+        round_key[15]<=key[127:120];
+
+        fourth_column_key[0]<=key[103:96];
+        fourth_column_key[1]<=key[111:104];
+        fourth_column_key[2]<=key[119:112];
+        fourth_column_key[3]<=key[127:120];
+
+        for(index=0;index<128;index=index+1)begin
+          out_data[index]<=data[index];
+        end
+
       end
 
-      ADD_ROUND_KEY:begin
-        out_data[0]<=out_data[0]^round_key[0];
-        out_data[1]<=out_data[0]^round_key[1];
-        out_data[2]<=out_data[0]^round_key[2];
-        out_data[3]<=out_data[0]^round_key[3];
-        out_data[4]<=out_data[0]^round_key[4];
-        out_data[5]<=out_data[0]^round_key[5];
-        out_data[6]<=out_data[0]^round_key[6];
-        out_data[7]<=out_data[0]^round_key[7];
-        out_data[8]<=out_data[0]^round_key[8];
-        out_data[9]<=out_data[0]^round_key[9];
-        out_data[10]<=out_data[0]^round_key[10];
-        out_data[11]<=out_data[0]^round_key[11];
-        out_data[12]<=out_data[0]^round_key[12];
-        out_data[13]<=out_data[0]^round_key[13];
-        out_data[14]<=out_data[0]^round_key[14];
-        out_data[15]<=out_data[0]^round_key[15];
+      `ADD_ROUND_KEY:begin
+        for(index=0;index<16;index=index+1)begin
+          out_data[index*8+:8]<=out_data[index*8+:8]^round_key[index];
+        end
+
+        //round key generation
+        round_key[0]<=key_operation[0];
+        round_key[1]<=key_operation[1];
+        round_key[2]<=key_operation[2];
+        round_key[3]<=key_operation[3];
         
+        round_key[4]<=round_key[4]^(key_operation[0]);
+        round_key[5]<=round_key[5]^(key_operation[1]);
+        round_key[6]<=round_key[6]^(key_operation[2]);
+        round_key[7]<=round_key[7]^(key_operation[3]);
         
-        //round key generation step1:RotWord
-        fourth_column_key[0]<=fourth_column_key[1];
-        fourth_column_key[1]<=fourth_column_key[2];
-        fourth_column_key[2]<=fourth_column_key[3];
-        fourth_column_key[3]<=fourth_column_key[0];
+        round_key[8]<=round_key[8]^(round_key[4]^(key_operation[0]));
+        round_key[9]<=round_key[9]^(round_key[5]^(key_operation[1]));
+        round_key[10]<=round_key[10]^(round_key[6]^(key_operation[2]));
+        round_key[11]<=round_key[11]^(round_key[7]^(key_operation[3]));
         
+        round_key[12]<=round_key[12]^(round_key[8]^(round_key[4]^(key_operation[0])));
+        round_key[13]<=round_key[13]^(round_key[9]^(round_key[5]^(key_operation[1])));
+        round_key[14]<=round_key[14]^(round_key[10]^(round_key[6]^(key_operation[2])));
+        round_key[15]<=round_key[15]^(round_key[11]^(round_key[7]^(key_operation[3])));
+       
+        fourth_column_key[0]<=round_key[12]^(round_key[8]^(round_key[4]^(key_operation[0])));
+        fourth_column_key[1]<=round_key[13]^(round_key[9]^(round_key[5]^(key_operation[1])));
+        fourth_column_key[2]<=round_key[14]^(round_key[10]^(round_key[6]^(key_operation[2])));
+        fourth_column_key[3]<=round_key[15]^(round_key[11]^(round_key[7]^(key_operation[3])));
+        
+ 
       end
 
-      SUB_BYTES:begin
+      `SUB_BYTES:begin
         //SubBytes
-        out_data[0]<=s_box[out_data[0]];
-        out_data[1]<=s_box[out_data[1]];
-        out_data[2]<=s_box[out_data[2]];
-        out_data[3]<=s_box[out_data[3]];
-        out_data[4]<=s_box[out_data[4]];
-        out_data[5]<=s_box[out_data[5]];
-        out_data[6]<=s_box[out_data[6]];
-        out_data[7]<=s_box[out_data[7]];
-        out_data[8]<=s_box[out_data[8]];
-        out_data[9]<=s_box[out_data[9]];
-        out_data[10]<=s_box[out_data[10]];
-        out_data[11]<=s_box[out_data[11]];
-        out_data[12]<=s_box[out_data[12]];
-        out_data[13]<=s_box[out_data[13]];
-        out_data[14]<=s_box[out_data[14]];
-        out_data[15]<=s_box[out_data[15]];
-
+        for(index=0;index<16;index=index+1)begin
+          out_data[index*8+:8]<=s_box[out_data[index*8+:8]];
+        end
+        rounds<=rounds+4'b1;
       end
 
-      SHIFT_ROWS:begin
+      `SHIFT_ROWS:begin
         //shift rows part
 
 
-        //round key generation step2: SubBytes
-        fourth_column_key[0]<=s_box[fourth_column_key[0]];
-        fourth_column_key[1]<=s_box[fourth_column_key[1]];
-        fourth_column_key[2]<=s_box[fourth_column_key[2]];
-        fourth_column_key[3]<=s_box[fourth_column_key[3]];
-
       end
 
-      MIX_COLUMS:begin
-
+      `MIX_COLUMNS:begin
+           
       end
 
-      DONE:begin
+      `DONE:begin
         done<=1;
       end
 

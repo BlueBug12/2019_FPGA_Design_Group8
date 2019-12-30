@@ -1,9 +1,0 @@
-
-
-/***************************** Include Files *******************************/
-#include "calculator.h"
-
-/************************** Function Definitions ***************************/
-int calculator(u32 op, u32 a, u32 b){
-
-}

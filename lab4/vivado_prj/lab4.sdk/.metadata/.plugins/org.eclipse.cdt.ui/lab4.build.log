@@ -1,8 +1,0 @@
-02:32:38 **** Incremental Build of configuration Debug for project lab4 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: Nothing to be done for 'main-build'.
-
-02:32:39 Build Finished (took 410ms)
-

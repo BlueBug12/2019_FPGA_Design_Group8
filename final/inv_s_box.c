@@ -99,7 +99,7 @@ int main(){
         s_box[93]=0x4c;
         s_box[94]=0x58;
         s_box[95]=0xcf;
-        s_box[96]=0xd6;
+        s_box[96]=0xd0;
         s_box[97]=0xef;
         s_box[98]=0xaa;
         s_box[99]=0xfb;

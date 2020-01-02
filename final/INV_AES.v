@@ -1,9 +1,10 @@
 `define INIT 4'b0000
 `define READ 4'b0001
-`define G_R_KEY 4'b1000 
+`define G_R_KEY 4'b1000  //generate round key
 `define ADD_ROUND_KEY 4'b0010
 `define INV_SHIFT_ROWS 4'b0011
 `define INV_SUB_BYTES 4'b0100
+`define G_GF 4'b1001  //generate GF2, GF4, GF8
 `define INV_MIX_COLUMNS 4'b0101
 `define DONE 4'b0110
 
@@ -24,7 +25,7 @@ integer index;
 wire [7:0]key_operation[3:0];
 wire [7:0]test[15:0];
 wire [7:0]test_shift[15:0];
-wire [7:0]temp_m[15:0]; //the element which has to xor '1b
+wire [7:0]temp_m[15:0]; //the element which has to xor '1b (GF2)
 
 // local reg
 reg [3:0] state, n_state;
@@ -35,7 +36,13 @@ reg [7:0] Rcon[9:0];
 reg [7:0] round_key [175:0];
 reg [7:0] fourth_column_key [3:0];
 reg [3:0] counter; //count G_R_KEY
-
+reg [1:0] counter2; //counter G_GF
+reg [7:0] GF2 [15:0];
+reg [7:0] GF4 [15:0];
+reg [7:0] GF8 [15:0];
+reg [7:0] OF2 [15:0]; //overflow
+reg [7:0] OF4 [15:0];
+reg [7:0] OF8 [15:0];
 
 //for debug
 assign key_test[0+:8] = round_key[(10-rounds)*16 + 0];
@@ -100,22 +107,22 @@ assign temp_m[14]=(test[14][7])?(8'h1B):(8'h00);
 assign temp_m[15]=(test[15][7])?(8'h1B):(8'h00);  
 
 //assign test_shift for code easily
-assign test_shift[0] = (test[0] << 1) ^ temp_m[0];
-assign test_shift[1] = (test[1] << 1) ^ temp_m[1];
-assign test_shift[2] = (test[2] << 1) ^ temp_m[2];
-assign test_shift[3] = (test[3] << 1) ^ temp_m[3];
-assign test_shift[4] = (test[4] << 1) ^ temp_m[4];
-assign test_shift[5] = (test[5] << 1) ^ temp_m[5];
-assign test_shift[6] = (test[6] << 1) ^ temp_m[6];
-assign test_shift[7] = (test[7] << 1) ^ temp_m[7];
-assign test_shift[8] = (test[8] << 1) ^ temp_m[8];
-assign test_shift[9] = (test[9] << 1) ^ temp_m[9];
-assign test_shift[10] = (test[10] << 1) ^ temp_m[10];
-assign test_shift[11] = (test[11] << 1) ^ temp_m[11];
-assign test_shift[12] = (test[12] << 1) ^ temp_m[12];
-assign test_shift[13] = (test[13] << 1) ^ temp_m[13];
-assign test_shift[14] = (test[14] << 1) ^ temp_m[14];
-assign test_shift[15] = (test[15] << 1) ^ temp_m[15];
+// assign test_shift[0] = (test[0] << 1) ^ temp_m[0];
+// assign test_shift[1] = (test[1] << 1) ^ temp_m[1];
+// assign test_shift[2] = (test[2] << 1) ^ temp_m[2];
+// assign test_shift[3] = (test[3] << 1) ^ temp_m[3];
+// assign test_shift[4] = (test[4] << 1) ^ temp_m[4];
+// assign test_shift[5] = (test[5] << 1) ^ temp_m[5];
+// assign test_shift[6] = (test[6] << 1) ^ temp_m[6];
+// assign test_shift[7] = (test[7] << 1) ^ temp_m[7];
+// assign test_shift[8] = (test[8] << 1) ^ temp_m[8];
+// assign test_shift[9] = (test[9] << 1) ^ temp_m[9];
+// assign test_shift[10] = (test[10] << 1) ^ temp_m[10];
+// assign test_shift[11] = (test[11] << 1) ^ temp_m[11];
+// assign test_shift[12] = (test[12] << 1) ^ temp_m[12];
+// assign test_shift[13] = (test[13] << 1) ^ temp_m[13];
+// assign test_shift[14] = (test[14] << 1) ^ temp_m[14];
+// assign test_shift[15] = (test[15] << 1) ^ temp_m[15];
 
 //--FSM--//
 
@@ -153,13 +160,19 @@ always @(*) begin
         else if(rounds == 10)
             n_state = `DONE;
         else
-            n_state = `INV_MIX_COLUMNS;
+            n_state = `G_GF;
     end
     `INV_SHIFT_ROWS: begin
         n_state = `INV_SUB_BYTES;
     end
     `INV_SUB_BYTES: begin
         n_state = `ADD_ROUND_KEY;
+    end
+    `G_GF: begin
+          if(counter2 == 3)
+               n_state = `INV_MIX_COLUMNS;
+          else
+               n_state = `G_GF;
     end
     `INV_MIX_COLUMNS: begin
         n_state = `INV_SHIFT_ROWS;
@@ -178,6 +191,7 @@ always @(posedge clk) begin
         rounds <= 0;
         done <= 0;
         counter <= 1; //for index
+        counter2 <= 0;
 
         //init Rcon
         Rcon[0]<=8'h01;
@@ -713,6 +727,7 @@ always @(posedge clk) begin
     `READ: begin
         rounds <= rounds;
         done <= 0;
+        counter2 <= 0;
 
         round_key[0]<=key[7:0];
         round_key[1]<=key[15:8];
@@ -746,6 +761,7 @@ always @(posedge clk) begin
     end
     `G_R_KEY: begin
           counter <= counter + 1;
+          counter2 <= 0;
       //round key generation
         round_key[counter*16 + 0]<=key_operation[0];
         round_key[counter*16 + 1]<=key_operation[1];
@@ -778,6 +794,7 @@ always @(posedge clk) begin
     `ADD_ROUND_KEY: begin
         rounds <= rounds;
         done <= 0;
+        counter2 <= 0;
 
         //add round key
         for(index=0;index<16;index=index+1)begin
@@ -789,6 +806,7 @@ always @(posedge clk) begin
     `INV_SHIFT_ROWS: begin
         rounds <= rounds + 1;
         done <= 0;
+        counter2 <= 0;
 
         out_data[7:0]<= out_data[7:0];
         out_data[39:32]<= out_data[39:32];
@@ -814,176 +832,210 @@ always @(posedge clk) begin
     `INV_SUB_BYTES: begin
         rounds <= rounds;
         done <= 0;
-
+        counter2 <= 0;
         //INV_SubBytes
         for(index=0;index<16;index=index+1)begin
           out_data[index*8+:8]<=inv_s_box[out_data[index*8+:8]];
         end
     end
-    `INV_MIX_COLUMNS: begin
-        rounds <= rounds;
-        done <= 0;
+    `G_GF: begin
+          rounds <= rounds;
+          done <= 0;
+          counter2 <= counter2 + 1;
 
+          //assign GF2
+          GF2[0] <=( test[0] << 1) ^ temp_m[0];
+          GF2[1] <=( test[1] << 1) ^ temp_m[1];
+          GF2[2] <=( test[2] << 1) ^ temp_m[2];
+          GF2[3] <=( test[3] << 1) ^ temp_m[3];
+          GF2[4] <=( test[4] << 1) ^ temp_m[4];
+          GF2[5] <=( test[5] << 1) ^ temp_m[5];
+          GF2[6] <=( test[6] << 1) ^ temp_m[6];
+          GF2[7] <=( test[7] << 1) ^ temp_m[7];
+          GF2[8] <=( test[8] << 1) ^ temp_m[8];
+          GF2[9] <=( test[9] << 1) ^ temp_m[9];
+          GF2[10] <= (test[10] << 1) ^ temp_m[10];
+          GF2[11] <= (test[11] << 1) ^ temp_m[11];
+          GF2[12] <= (test[12] << 1) ^ temp_m[12];
+          GF2[13] <= (test[13] << 1) ^ temp_m[13];
+          GF2[14] <= (test[14] << 1) ^ temp_m[14];
+          GF2[15] <= (test[15] << 1) ^ temp_m[15];
+          
+          
+
+          OF4[0] <=(((test[0] << 1) ^ temp_m[0])  & 8'b10000000) ? 8'h1b : 8'h0;      
+          OF4[1] <= (((test[1] << 1) ^ temp_m[1]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[2] <= (((test[2] << 1) ^ temp_m[2]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[3] <= (((test[3] << 1) ^ temp_m[3]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[4] <= (((test[4] << 1) ^ temp_m[4]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[5] <= (((test[5] << 1) ^ temp_m[5]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[6] <= (((test[6] << 1) ^ temp_m[6]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[7] <= (((test[7] << 1) ^ temp_m[7]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[8] <= (((test[8] << 1) ^ temp_m[8]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[9] <= (((test[9] << 1) ^ temp_m[9]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[10] <= (((test[10] << 1) ^ temp_m[10]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[11] <= (((test[11] << 1) ^ temp_m[11]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[12] <= (((test[12] << 1) ^ temp_m[12]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[13] <= (((test[13] << 1) ^ temp_m[13]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[14] <= (((test[14] << 1) ^ temp_m[14]) & 8'b10000000) ? 8'h1b : 0;
+          OF4[15] <= (((test[15] << 1) ^ temp_m[15]) & 8'b10000000) ? 8'h1b : 0;
+
+          //assign GF4
+
+          GF4[0] <= ((GF2[0] << 1) ^ OF4[0]);
+          GF4[1] <= ((GF2[1] << 1) ^ OF4[1]);
+          GF4[2] <= ((GF2[2] << 1) ^ OF4[2]);
+          GF4[3] <= ((GF2[3] << 1) ^ OF4[3]);
+          GF4[4] <= ((GF2[4] << 1) ^ OF4[4]);
+          GF4[5] <= ((GF2[5] << 1) ^ OF4[5]);
+          GF4[6] <= ((GF2[6] << 1) ^ OF4[6]);
+          GF4[7] <= ((GF2[7] << 1) ^ OF4[7]);
+          GF4[8] <= ((GF2[8] << 1) ^ OF4[8]);
+          GF4[9] <= ((GF2[9] << 1) ^ OF4[9]);
+          GF4[10] <= ((GF2[10] << 1) ^ OF4[10]);
+          GF4[11] <= ((GF2[11] << 1) ^ OF4[11]);
+          GF4[12] <= ((GF2[12] << 1) ^ OF4[12]);
+          GF4[13] <= ((GF2[13] << 1) ^ OF4[13]);
+          GF4[14] <= ((GF2[14] << 1) ^ OF4[14]);          
+          GF4[15] <= ((GF2[15] << 1) ^ OF4[15]);
+
+          OF8[0] <= (((GF2[0] << 1) ^ OF4[0]) & 8'b10000000) ? 8'h1B : 0;
+          OF8[1] <= (((GF2[1] << 1) ^ OF4[0]) & 8'b10000000) ? 8'h1B : 0;
+          OF8[2] <= (((GF2[2] << 1) ^ OF4[0]) & 8'b10000000) ? 8'h1B : 0;
+          OF8[3] <= (((GF2[3] << 1) ^ OF4[0]) & 8'b10000000) ? 8'h1B : 0;
+          OF8[4] <= (((GF2[4] << 1) ^ OF4[0]) & 8'b10000000) ? 8'h1B : 0;
+          OF8[5] <= (((GF2[5] << 1) ^ OF4[0]) & 8'b10000000) ? 8'h1B : 0;
+          OF8[6] <= (((GF2[6] << 1) ^ OF4[0]) & 8'b10000000) ? 8'h1B : 0;
+          OF8[7] <= (((GF2[7] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+          OF8[8] <= (((GF2[8] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+          OF8[9] <= (((GF2[9] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+          OF8[10] <= (((GF2[10] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+          OF8[11] <= (((GF2[11] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+          OF8[12] <= (((GF2[12] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+          OF8[13] <= (((GF2[13] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+          OF8[14] <= (((GF2[14] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+          OF8[15] <= (((GF2[15] << 1) ^ OF4[0])& 8'b10000000) ? 8'h1B : 0;
+
+          //assign GF8
+          GF8[0] <= ((GF4[0] << 1) ^ OF8[0]);
+          GF8[1] <= ((GF4[1] << 1) ^ OF8[1]);
+          GF8[2] <= ((GF4[2] << 1) ^ OF8[2]);
+          GF8[3] <= ((GF4[3] << 1) ^ OF8[3]);
+          GF8[4] <= ((GF4[4] << 1) ^ OF8[4]);
+          GF8[5] <= ((GF4[5] << 1) ^ OF8[5]);
+          GF8[6] <= ((GF4[6] << 1) ^ OF8[6]);
+          GF8[7] <= ((GF4[7] << 1) ^ OF8[7]);
+          GF8[8] <= ((GF4[8] << 1) ^ OF8[8]);
+          GF8[9] <= ((GF4[9] << 1) ^ OF8[9]);
+          GF8[10] <= ((GF4[10] << 1) ^ OF8[10]);
+          GF8[11] <= ((GF4[11] << 1) ^ OF8[11]);
+          GF8[12] <= ((GF4[12] << 1) ^ OF8[12]);
+          GF8[13] <= ((GF4[13] << 1) ^ OF8[13]);
+          GF8[14] <= ((GF4[14] << 1) ^ OF8[14]);          
+          GF8[15] <= ((GF4[15] << 1) ^ OF8[15]);
+    end
+    `INV_MIX_COLUMNS: begin
+        rounds<= rounds;
+        done <= 0;
+        counter2 <= 0;
         //assign out_data
         //col 1
-        out_data[7:0] <= test_shift[0] ^ test_shift[0] ^ test_shift[0] ^ test_shift[0]      //E
-                                ^ test_shift[0] ^ test_shift[0] ^ test_shift[0]
-                         ^ test_shift[1] ^ test_shift[1] ^ test_shift[1] ^ test_shift[1]    //B
-                                ^ test_shift[1] ^ test[1]   
-                         ^ test_shift[2] ^ test_shift[2] ^ test_shift[2] ^ test_shift[2]    //D
-                                ^ test_shift[2] ^ test_shift[2] ^ test[2]
-                         ^ test_shift[3] ^ test_shift[3] ^ test_shift[3] ^ test_shift[3]    //9
-                                ^ test[3];
+        out_data[7:0] <=  GF8[0] ^ GF4[0] ^ GF2[0]//E
+                         ^ GF8[1] ^ GF2[1] ^ test[1]    //B  
+                         ^ GF8[2] ^ GF4[2] ^ test[2]   //D
+                         ^ GF8[3] ^ test[3];    //9
 
-        out_data[15:8] <= test_shift[0] ^ test_shift[0] ^ test_shift[0] ^ test_shift[0]     //9
-                                ^ test[0]
-                          ^ test_shift[1] ^ test_shift[1] ^ test_shift[1] ^ test_shift[1]   //E
-                                ^ test_shift[1] ^ test_shift[1] ^ test_shift[1]
-                          ^ test_shift[2] ^ test_shift[2] ^ test_shift[2] ^ test_shift[2]   //B
-                                ^ test_shift[2] ^ test[2]
-                          ^ test_shift[3] ^ test_shift[3] ^ test_shift[3] ^ test_shift[3]   //D
-                                ^ test_shift[3] ^ test_shift[3] ^ test[3];
+        out_data[15:8] <= GF8[0] ^ test[0] //9
+                          ^ GF8[1] ^ GF4[1] ^ GF2[1]   //E
+                          ^ GF8[2] ^ GF2[2] ^ test[2]//B
+                          ^ GF8[3] ^ GF4[3] ^ test[3];//D
 
-        out_data[23:16] <= test_shift[0] ^ test_shift[0] ^ test_shift[0] ^ test_shift[0] ^  //D
-                                ^ test_shift[0] ^ test_shift[0] ^ test[0]
-                           ^ test_shift[1] ^ test_shift[1] ^ test_shift[1] ^ test_shift[1]  //9
-                                ^ test[1]
-                           ^ test_shift[2] ^ test_shift[2] ^ test_shift[2] ^ test_shift[2]  //E
-                                ^ test_shift[2] ^ test_shift[2] ^ test_shift[2]
-                           ^ test_shift[3] ^ test_shift[3] ^ test_shift[3] ^ test_shift[3]  //B
-                                ^ test_shift[3] ^ test[3];
+        out_data[23:16] <= GF8[0] ^ GF4[0] ^ test[0] //D
+                          ^ GF8[1] ^ test[1] //9
+                          ^ GF8[2] ^ GF4[2] ^ GF2[2]//E
+                          ^ GF8[3] ^ GF2[3] ^ test[3];//B
+                           
 
-        out_data[31:24] <= test_shift[0] ^ test_shift[0] ^ test_shift[0] ^ test_shift[0]    //B
-                                ^ test_shift[0] ^ test[0]
-                           ^ test_shift[1] ^ test_shift[1] ^ test_shift[1] ^ test_shift[1]  //D
-                                ^ test_shift[1] ^ test_shift[1] ^ test[1]
-                           ^ test_shift[2] ^ test_shift[2] ^ test_shift[2] ^ test_shift[2]  //9
-                                ^ test[2]
-                           ^ test_shift[3] ^ test_shift[3] ^ test_shift[3] ^ test_shift[3]  //E
-                                ^ test_shift[3] ^ test_shift[3] ^ test_shift[3];
-
+        out_data[31:24] <= GF8[0] ^ GF2[0] ^ test[0]//B  
+                          ^ GF8[1] ^ GF4[1] ^ test[1]//D
+                          ^ GF8[2] ^ test[2]//9
+                          ^ GF8[3] ^ GF4[3] ^ GF2[3];//E
+                              
 
 
 
         //col 2
-        out_data[39:32] <= test_shift[4] ^ test_shift[4] ^ test_shift[4] ^ test_shift[4]      //E
-                                ^ test_shift[4] ^ test_shift[4] ^ test_shift[4]
-                         ^ test_shift[5] ^ test_shift[5] ^ test_shift[5] ^ test_shift[5]    //B
-                                ^ test_shift[5] ^ test[5]   
-                         ^ test_shift[6] ^ test_shift[6] ^ test_shift[6] ^ test_shift[6]    //D
-                                ^ test_shift[6] ^ test_shift[6] ^ test[6]
-                         ^ test_shift[7] ^ test_shift[7] ^ test_shift[7] ^ test_shift[7]    //9
-                                ^ test[7];
+        out_data[39:32] <= GF8[4] ^ GF4[4] ^ GF2[4]//E
+                         ^ GF8[5] ^ GF2[5] ^ test[5]    //B  
+                         ^ GF8[6] ^ GF4[6] ^ test[6]   //D
+                         ^ GF8[7] ^ test[7];    //9
 
-        out_data[47:40] <= test_shift[4] ^ test_shift[4] ^ test_shift[4] ^ test_shift[4]     //9
-                                ^ test[4]
-                          ^ test_shift[5] ^ test_shift[5] ^ test_shift[5] ^ test_shift[5]   //E
-                                ^ test_shift[5] ^ test_shift[5] ^ test_shift[5]
-                          ^ test_shift[6] ^ test_shift[6] ^ test_shift[6] ^ test_shift[6]   //B
-                                ^ test_shift[6] ^ test[6]
-                          ^ test_shift[7] ^ test_shift[7] ^ test_shift[7] ^ test_shift[7]   //D
-                                ^ test_shift[7] ^ test_shift[7] ^ test[7];
+        out_data[47:40] <= GF8[4] ^ test[4] //9
+                          ^ GF8[5] ^ GF4[5] ^ GF2[5]   //E
+                          ^ GF8[6] ^ GF2[6] ^ test[6]//B
+                          ^ GF8[7] ^ GF4[7] ^ test[7];//D
 
-        out_data[55:48] <= test_shift[4] ^ test_shift[4] ^ test_shift[4] ^ test_shift[4] ^  //D
-                                ^ test_shift[4] ^ test_shift[4] ^ test[4]
-                           ^ test_shift[5] ^ test_shift[5] ^ test_shift[5] ^ test_shift[5]  //9
-                                ^ test[5]
-                           ^ test_shift[6] ^ test_shift[6] ^ test_shift[6] ^ test_shift[6]  //E
-                                ^ test_shift[6] ^ test_shift[6] ^ test_shift[6]
-                           ^ test_shift[7] ^ test_shift[7] ^ test_shift[7] ^ test_shift[7]  //B
-                                ^ test_shift[7] ^ test[7];
 
-        out_data[63:56] <= test_shift[4] ^ test_shift[4] ^ test_shift[4] ^ test_shift[4]    //B
-                                ^ test_shift[4] ^ test[4]
-                           ^ test_shift[5] ^ test_shift[5] ^ test_shift[5] ^ test_shift[5]  //D
-                                ^ test_shift[5] ^ test_shift[5] ^ test[5]
-                           ^ test_shift[6] ^ test_shift[6] ^ test_shift[6] ^ test_shift[6]  //9
-                                ^ test[6]
-                           ^ test_shift[7] ^ test_shift[7] ^ test_shift[7] ^ test_shift[7]  //E
-                                ^ test_shift[7] ^ test_shift[7] ^ test_shift[7];
+        out_data[55:48] <= GF8[4] ^ GF4[4] ^ test[4] //D
+                          ^ GF8[5] ^ test[5] //9
+                          ^ GF8[6] ^ GF4[6] ^ GF2[6]//E
+                          ^ GF8[7] ^ GF2[7] ^ test[7];//B
+
+        out_data[63:56] <= GF8[4] ^ GF2[4] ^ test[4]//B  
+                          ^ GF8[5] ^ GF4[5] ^ test[5]//D
+                          ^ GF8[6] ^ test[6]//9
+                          ^ GF8[7] ^ GF4[7] ^ GF2[7];//E
 
 
         //col 3
-        out_data[71:64] <= test_shift[8] ^ test_shift[8] ^ test_shift[8] ^ test_shift[8]      //E
-                                ^ test_shift[8] ^ test_shift[8] ^ test_shift[8]
-                         ^ test_shift[9] ^ test_shift[9] ^ test_shift[9] ^ test_shift[9]    //B
-                                ^ test_shift[9] ^ test[9]   
-                         ^ test_shift[10] ^ test_shift[10] ^ test_shift[10] ^ test_shift[10]    //D
-                                ^ test_shift[10] ^ test_shift[10] ^ test[10]
-                         ^ test_shift[11] ^ test_shift[11] ^ test_shift[11] ^ test_shift[11]    //9
-                                ^ test[11];
+        out_data[71:64] <= GF8[8] ^ GF4[8] ^ GF2[8]//E
+                         ^ GF8[9] ^ GF2[9] ^ test[9]    //B  
+                         ^ GF8[10] ^ GF4[10] ^ test[10]   //D
+                         ^ GF8[11] ^ test[11];    //9
 
-        out_data[79:72] <= test_shift[8] ^ test_shift[8] ^ test_shift[8] ^ test_shift[8]     //9
-                                ^ test[8]
-                          ^ test_shift[9] ^ test_shift[9] ^ test_shift[9] ^ test_shift[9]   //E
-                                ^ test_shift[9] ^ test_shift[9] ^ test_shift[9]
-                          ^ test_shift[10] ^ test_shift[10] ^ test_shift[10] ^ test_shift[10]   //B
-                                ^ test_shift[10] ^ test[10]
-                          ^ test_shift[11] ^ test_shift[11] ^ test_shift[11] ^ test_shift[11]   //D
-                                ^ test_shift[11] ^ test_shift[11] ^ test[11];
+        out_data[79:72] <= GF8[8] ^ test[8] //9
+                          ^ GF8[9] ^ GF4[9] ^ GF2[9]   //E
+                          ^ GF8[10] ^ GF2[10] ^ test[10]//B
+                          ^ GF8[11] ^ GF4[11] ^ test[11];//D
 
-        out_data[87:80] <= test_shift[8] ^ test_shift[8] ^ test_shift[8] ^ test_shift[8] ^  //D
-                                ^ test_shift[8] ^ test_shift[8] ^ test[8]
-                           ^ test_shift[9] ^ test_shift[9] ^ test_shift[9] ^ test_shift[9]  //9
-                                ^ test[9]
-                           ^ test_shift[10] ^ test_shift[10] ^ test_shift[10] ^ test_shift[10]  //E
-                                ^ test_shift[10] ^ test_shift[10] ^ test_shift[10]
-                           ^ test_shift[11] ^ test_shift[11] ^ test_shift[11] ^ test_shift[11]  //B
-                                ^ test_shift[11] ^ test[11];
 
-        out_data[95:88] <= test_shift[8] ^ test_shift[8] ^ test_shift[8] ^ test_shift[8]    //B
-                                ^ test_shift[8] ^ test[8]
-                           ^ test_shift[9] ^ test_shift[9] ^ test_shift[9] ^ test_shift[9]  //D
-                                ^ test_shift[9] ^ test_shift[9] ^ test[9]
-                           ^ test_shift[10] ^ test_shift[10] ^ test_shift[10] ^ test_shift[10]  //9
-                                ^ test[10]
-                           ^ test_shift[11] ^ test_shift[11] ^ test_shift[1] ^ test_shift[11]  //E
-                                ^ test_shift[11] ^ test_shift[11] ^ test_shift[11];
+        out_data[87:80] <= GF8[8] ^ GF4[8] ^ test[8] //D
+                          ^ GF8[9] ^ test[9] //9
+                          ^ GF8[10] ^ GF4[10] ^ GF2[10]//E
+                          ^ GF8[11] ^ GF2[11] ^ test[11];//B
 
+        out_data[95:88] <= GF8[8] ^ GF2[8] ^ test[8]//B  
+                          ^ GF8[9] ^ GF4[9] ^ test[9]//D
+                          ^ GF8[10] ^ test[10]//9
+                          ^ GF8[11] ^ GF4[11] ^ GF2[11];//E
 
         //col 4
-        out_data[103:96] <= test_shift[12] ^ test_shift[12] ^ test_shift[12] ^ test_shift[12]      //E
-                                ^ test_shift[12] ^ test_shift[12] ^ test_shift[12]
-                         ^ test_shift[13] ^ test_shift[13] ^ test_shift[13] ^ test_shift[13]    //B
-                                ^ test_shift[13] ^ test[13]   
-                         ^ test_shift[14] ^ test_shift[14] ^ test_shift[14] ^ test_shift[14]    //D
-                                ^ test_shift[14] ^ test_shift[14] ^ test[14]
-                         ^ test_shift[15] ^ test_shift[15] ^ test_shift[15] ^ test_shift[15]    //9
-                                ^ test[15];
+        out_data[103:96] <= GF8[12] ^ GF4[12] ^ GF2[12]//E
+                         ^ GF8[13] ^ GF2[13] ^ test[13]    //B  
+                         ^ GF8[14] ^ GF4[14] ^ test[14]   //D
+                         ^ GF8[15] ^ test[15];    //9
 
-        out_data[111:104] <= test_shift[12] ^ test_shift[12] ^ test_shift[12] ^ test_shift[12]     //9
-                                ^ test[12]
-                          ^ test_shift[13] ^ test_shift[13] ^ test_shift[13] ^ test_shift[13]   //E
-                                ^ test_shift[13] ^ test_shift[13] ^ test_shift[13]
-                          ^ test_shift[14] ^ test_shift[14] ^ test_shift[14] ^ test_shift[14]   //B
-                                ^ test_shift[14] ^ test[14]
-                          ^ test_shift[15] ^ test_shift[15] ^ test_shift[15] ^ test_shift[15]   //D
-                                ^ test_shift[15] ^ test_shift[15] ^ test[15];
+        out_data[111:104] <= GF8[12] ^ test[12] //9
+                          ^ GF8[13] ^ GF4[13] ^ GF2[13]   //E
+                          ^ GF8[14] ^ GF2[14] ^ test[14]//B
+                          ^ GF8[15] ^ GF4[15] ^ test[15];//D
 
-        out_data[119:112] <= test_shift[12] ^ test_shift[12] ^ test_shift[12] ^ test_shift[12] ^  //D
-                                ^ test_shift[12] ^ test_shift[12] ^ test[12]
-                           ^ test_shift[13] ^ test_shift[13] ^ test_shift[13] ^ test_shift[13]  //9
-                                ^ test[13]
-                           ^ test_shift[14] ^ test_shift[14] ^ test_shift[14] ^ test_shift[14]  //E
-                                ^ test_shift[14] ^ test_shift[14] ^ test_shift[14]
-                           ^ test_shift[15] ^ test_shift[15] ^ test_shift[15] ^ test_shift[15]  //B
-                                ^ test_shift[15] ^ test[15];
+        out_data[119:112] <= GF8[12] ^ GF4[12] ^ test[12] //D
+                          ^ GF8[13] ^ test[13] //9
+                          ^ GF8[14] ^ GF4[14] ^ GF2[14]//E
+                          ^ GF8[15] ^ GF2[15] ^ test[15];//B
 
-        out_data[127:120] <= test_shift[12] ^ test_shift[12] ^ test_shift[12] ^ test_shift[12]    //B
-                                ^ test_shift[12] ^ test[12]
-                           ^ test_shift[13] ^ test_shift[13] ^ test_shift[13] ^ test_shift[13]  //D
-                                ^ test_shift[13] ^ test_shift[13] ^ test[13]
-                           ^ test_shift[14] ^ test_shift[14] ^ test_shift[14] ^ test_shift[14]  //9
-                                ^ test[14]
-                           ^ test_shift[15] ^ test_shift[15] ^ test_shift[15] ^ test_shift[15]  //E
-                                ^ test_shift[15] ^ test_shift[15] ^ test_shift[15];
-
+        out_data[127:120] <= GF8[12] ^ GF2[12] ^ test[12]//B  
+                          ^ GF8[13] ^ GF4[13] ^ test[13]//D
+                          ^ GF8[14] ^ test[14]//9
+                          ^ GF8[15] ^ GF4[15] ^ GF2[15];//E
 
     end
     `DONE: begin
         rounds <= rounds;
         done <= 1;
         out_data <= out_data;
+        counter2 <= 0;
 
     end
     endcase

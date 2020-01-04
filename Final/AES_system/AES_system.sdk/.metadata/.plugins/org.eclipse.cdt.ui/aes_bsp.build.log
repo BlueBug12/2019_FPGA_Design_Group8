@@ -1,4 +1,4 @@
-13:39:43 **** Auto Build of project aes_bsp ****
+23:36:05 **** Auto Build of project aes_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/AES_system_v1_0/src"
 D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/AES_system_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -110,5 +110,5 @@ D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s
 "Compiling xadcps"
 'Finished building libraries'
 
-13:40:05 Build Finished (took 22s.139ms)
+23:36:27 Build Finished (took 22s.444ms)
 

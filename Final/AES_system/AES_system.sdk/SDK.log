@@ -1243,3 +1243,1772 @@ con
 ----------------End of Script----------------
 
 13:53:22 INFO  : Disconnected from the channel tcfchan#24.
+15:21:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1578122442868,  Project:1578100836720
+15:21:19 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:21:33 INFO  : Copied contents of D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+15:21:37 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:21:53 INFO  : 
+15:21:54 INFO  : Updating hardware inferred compiler options for aes.
+15:21:54 INFO  : Clearing existing target manager status.
+15:21:54 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+15:21:55 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+15:21:56 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+15:21:56 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+15:21:57 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:21:59 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:23:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:23:30 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:23:30 INFO  : 'jtag frequency' command is executed.
+15:23:30 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:23:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:23:33 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:23:33 INFO  : Context for 'APU' is selected.
+15:23:33 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:23:33 INFO  : 'configparams force-mem-access 1' command is executed.
+15:23:33 INFO  : Context for 'APU' is selected.
+15:23:33 INFO  : 'stop' command is executed.
+15:23:35 INFO  : 'ps7_init' command is executed.
+15:23:35 INFO  : 'ps7_post_config' command is executed.
+15:23:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:23:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:23:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:23:37 ERROR : Memory write error at 0x100000. AP transaction timeout
+15:23:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+----------------End of Script----------------
+
+15:24:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:24:23 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:24:23 INFO  : 'jtag frequency' command is executed.
+15:24:23 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:24:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:24:27 ERROR : fpga configuration failed. DONE PIN is not HIGH
+15:24:27 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: fpga configuration failed. DONE PIN is not HIGH
+15:24:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+----------------End of Script----------------
+
+15:25:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:01 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:25:01 INFO  : 'jtag frequency' command is executed.
+15:25:01 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:25:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:25:04 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:25:04 INFO  : Context for 'APU' is selected.
+15:25:04 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:25:04 INFO  : 'configparams force-mem-access 1' command is executed.
+15:25:04 INFO  : Context for 'APU' is selected.
+15:25:04 INFO  : 'stop' command is executed.
+15:25:04 INFO  : 'ps7_init' command is executed.
+15:25:04 INFO  : 'ps7_post_config' command is executed.
+15:25:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:25:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:05 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:25:05 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:05 INFO  : 'con' command is executed.
+15:25:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:25:05 INFO  : Disconnected from the channel tcfchan#25.
+15:28:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:46 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:28:46 INFO  : 'jtag frequency' command is executed.
+15:28:46 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:28:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:28:48 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:28:48 INFO  : Context for 'APU' is selected.
+15:28:50 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:28:50 INFO  : 'configparams force-mem-access 1' command is executed.
+15:28:50 INFO  : Context for 'APU' is selected.
+15:28:51 INFO  : 'stop' command is executed.
+15:28:51 INFO  : 'ps7_init' command is executed.
+15:28:51 INFO  : 'ps7_post_config' command is executed.
+15:28:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:28:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:51 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:28:51 INFO  : 'configparams force-mem-access 0' command is executed.
+15:28:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:28:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:51 INFO  : 'con' command is executed.
+15:28:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:28:51 INFO  : Disconnected from the channel tcfchan#26.
+15:29:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:41 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:29:41 INFO  : 'jtag frequency' command is executed.
+15:29:41 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:29:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:29:43 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:29:43 INFO  : Context for 'APU' is selected.
+15:29:43 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:29:43 INFO  : 'configparams force-mem-access 1' command is executed.
+15:29:43 INFO  : Context for 'APU' is selected.
+15:29:43 INFO  : 'stop' command is executed.
+15:29:44 INFO  : 'ps7_init' command is executed.
+15:29:44 INFO  : 'ps7_post_config' command is executed.
+15:29:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:29:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:44 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:29:44 INFO  : 'configparams force-mem-access 0' command is executed.
+15:29:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:29:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:44 INFO  : 'con' command is executed.
+15:29:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:29:44 INFO  : Disconnected from the channel tcfchan#27.
+15:36:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:36:40 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:36:40 INFO  : 'jtag frequency' command is executed.
+15:36:40 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:36:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:36:42 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:36:43 INFO  : Context for 'APU' is selected.
+15:36:43 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:36:43 INFO  : 'configparams force-mem-access 1' command is executed.
+15:36:43 INFO  : Context for 'APU' is selected.
+15:36:43 INFO  : 'stop' command is executed.
+15:36:43 INFO  : 'ps7_init' command is executed.
+15:36:43 INFO  : 'ps7_post_config' command is executed.
+15:36:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:36:43 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:36:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:36:43 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:36:43 INFO  : 'configparams force-mem-access 0' command is executed.
+15:36:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:36:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:36:43 INFO  : 'con' command is executed.
+15:36:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:36:43 INFO  : Disconnected from the channel tcfchan#28.
+15:46:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:46:58 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:46:58 INFO  : 'jtag frequency' command is executed.
+15:46:58 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:46:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:47:00 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:47:00 INFO  : Context for 'APU' is selected.
+15:47:00 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:47:00 INFO  : 'configparams force-mem-access 1' command is executed.
+15:47:00 INFO  : Context for 'APU' is selected.
+15:47:00 INFO  : 'stop' command is executed.
+15:47:01 INFO  : 'ps7_init' command is executed.
+15:47:01 INFO  : 'ps7_post_config' command is executed.
+15:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:47:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:47:01 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:47:01 INFO  : 'configparams force-mem-access 0' command is executed.
+15:47:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:47:01 INFO  : 'con' command is executed.
+15:47:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:47:01 INFO  : Disconnected from the channel tcfchan#29.
+15:58:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:58:34 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:58:34 INFO  : 'jtag frequency' command is executed.
+15:58:34 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:58:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:58:36 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:58:36 INFO  : Context for 'APU' is selected.
+15:58:36 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:58:36 INFO  : 'configparams force-mem-access 1' command is executed.
+15:58:37 INFO  : Context for 'APU' is selected.
+15:58:37 INFO  : 'stop' command is executed.
+15:58:37 INFO  : 'ps7_init' command is executed.
+15:58:37 INFO  : 'ps7_post_config' command is executed.
+15:58:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:58:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:37 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:58:37 INFO  : 'configparams force-mem-access 0' command is executed.
+15:58:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:58:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:37 INFO  : 'con' command is executed.
+15:58:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:58:37 INFO  : Disconnected from the channel tcfchan#30.
+16:00:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:16 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+16:00:16 INFO  : 'jtag frequency' command is executed.
+16:00:16 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:00:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+16:00:19 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+16:00:19 INFO  : Context for 'APU' is selected.
+16:00:19 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+16:00:19 INFO  : 'configparams force-mem-access 1' command is executed.
+16:00:19 INFO  : Context for 'APU' is selected.
+16:00:19 INFO  : 'stop' command is executed.
+16:00:19 INFO  : 'ps7_init' command is executed.
+16:00:19 INFO  : 'ps7_post_config' command is executed.
+16:00:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:00:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:20 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:00:20 INFO  : 'configparams force-mem-access 0' command is executed.
+16:00:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:00:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:20 INFO  : 'con' command is executed.
+16:00:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+16:00:20 INFO  : Disconnected from the channel tcfchan#31.
+16:01:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:01:01 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+16:01:01 INFO  : 'jtag frequency' command is executed.
+16:01:01 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:01:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+16:01:03 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+16:01:03 INFO  : Context for 'APU' is selected.
+16:01:03 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+16:01:03 INFO  : 'configparams force-mem-access 1' command is executed.
+16:01:03 INFO  : Context for 'APU' is selected.
+16:01:03 INFO  : 'stop' command is executed.
+16:01:04 INFO  : 'ps7_init' command is executed.
+16:01:04 INFO  : 'ps7_post_config' command is executed.
+16:01:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:01:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:04 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:01:04 INFO  : 'configparams force-mem-access 0' command is executed.
+16:01:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:01:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:01:04 INFO  : 'con' command is executed.
+16:01:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+16:01:04 INFO  : Disconnected from the channel tcfchan#32.
+16:01:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:01:57 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+16:01:57 INFO  : 'jtag frequency' command is executed.
+16:01:57 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:01:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+16:01:59 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+16:02:00 INFO  : Context for 'APU' is selected.
+16:02:00 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+16:02:00 INFO  : 'configparams force-mem-access 1' command is executed.
+16:02:00 INFO  : Context for 'APU' is selected.
+16:02:00 INFO  : 'stop' command is executed.
+16:02:00 INFO  : 'ps7_init' command is executed.
+16:02:00 INFO  : 'ps7_post_config' command is executed.
+16:02:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:00 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:02:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:00 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:02:00 INFO  : 'configparams force-mem-access 0' command is executed.
+16:02:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:02:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:00 INFO  : 'con' command is executed.
+16:02:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+16:02:00 INFO  : Disconnected from the channel tcfchan#33.
+16:03:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:03:41 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+16:03:41 INFO  : 'jtag frequency' command is executed.
+16:03:41 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:03:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+16:03:44 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+16:03:44 INFO  : Context for 'APU' is selected.
+16:03:44 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+16:03:44 INFO  : 'configparams force-mem-access 1' command is executed.
+16:03:44 INFO  : Context for 'APU' is selected.
+16:03:44 INFO  : 'stop' command is executed.
+16:03:45 INFO  : 'ps7_init' command is executed.
+16:03:45 INFO  : 'ps7_post_config' command is executed.
+16:03:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:03:45 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:03:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:03:45 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:03:45 INFO  : 'configparams force-mem-access 0' command is executed.
+16:03:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:03:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:03:45 INFO  : 'con' command is executed.
+16:03:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+16:03:45 INFO  : Disconnected from the channel tcfchan#34.
+16:29:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:29:54 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+16:29:54 INFO  : 'jtag frequency' command is executed.
+16:29:54 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:29:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+16:29:57 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+16:29:57 INFO  : Context for 'APU' is selected.
+16:29:57 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+16:29:57 INFO  : 'configparams force-mem-access 1' command is executed.
+16:29:57 INFO  : Context for 'APU' is selected.
+16:29:57 INFO  : 'stop' command is executed.
+16:29:57 INFO  : 'ps7_init' command is executed.
+16:29:57 INFO  : 'ps7_post_config' command is executed.
+16:29:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:29:58 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:29:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:29:58 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:29:58 INFO  : 'configparams force-mem-access 0' command is executed.
+16:29:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:29:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:29:58 INFO  : 'con' command is executed.
+16:29:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+16:29:58 INFO  : Disconnected from the channel tcfchan#35.
+17:27:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:27:55 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+17:27:55 INFO  : 'jtag frequency' command is executed.
+17:27:55 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:27:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+17:27:58 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:27:58 INFO  : Context for 'APU' is selected.
+17:27:58 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:27:58 INFO  : 'configparams force-mem-access 1' command is executed.
+17:27:58 INFO  : Context for 'APU' is selected.
+17:27:58 INFO  : 'stop' command is executed.
+17:27:58 INFO  : 'ps7_init' command is executed.
+17:27:58 INFO  : 'ps7_post_config' command is executed.
+17:27:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:27:58 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:27:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:27:59 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:27:59 INFO  : 'configparams force-mem-access 0' command is executed.
+17:27:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:27:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:27:59 INFO  : 'con' command is executed.
+17:27:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+17:27:59 INFO  : Disconnected from the channel tcfchan#36.
+17:35:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:35:46 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+17:35:46 INFO  : 'jtag frequency' command is executed.
+17:35:46 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:35:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+17:35:48 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:35:48 INFO  : Context for 'APU' is selected.
+17:35:48 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:35:48 INFO  : 'configparams force-mem-access 1' command is executed.
+17:35:48 INFO  : Context for 'APU' is selected.
+17:35:49 INFO  : 'stop' command is executed.
+17:35:49 INFO  : 'ps7_init' command is executed.
+17:35:49 INFO  : 'ps7_post_config' command is executed.
+17:35:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:35:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:35:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:35:49 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:35:49 INFO  : 'configparams force-mem-access 0' command is executed.
+17:35:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:35:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:35:49 INFO  : 'con' command is executed.
+17:35:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+17:35:49 INFO  : Disconnected from the channel tcfchan#37.
+17:45:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:45:46 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+17:45:46 INFO  : 'jtag frequency' command is executed.
+17:45:46 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:45:46 INFO  : Context for 'APU' is selected.
+17:45:46 INFO  : System reset is completed.
+17:45:49 INFO  : 'after 3000' command is executed.
+17:45:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+17:45:52 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:45:52 INFO  : Context for 'APU' is selected.
+17:45:52 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:45:52 INFO  : 'configparams force-mem-access 1' command is executed.
+17:45:52 INFO  : Context for 'APU' is selected.
+17:45:52 INFO  : 'ps7_init' command is executed.
+17:45:52 INFO  : 'ps7_post_config' command is executed.
+17:45:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:45:53 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:45:53 INFO  : 'configparams force-mem-access 0' command is executed.
+17:45:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:45:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:45:53 INFO  : 'con' command is executed.
+17:45:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+17:45:53 INFO  : Disconnected from the channel tcfchan#38.
+18:10:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:10:27 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+18:10:27 INFO  : 'jtag frequency' command is executed.
+18:10:27 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:10:27 INFO  : Context for 'APU' is selected.
+18:10:27 INFO  : System reset is completed.
+18:10:30 INFO  : 'after 3000' command is executed.
+18:10:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+18:10:33 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:10:33 INFO  : Context for 'APU' is selected.
+18:10:33 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:10:33 INFO  : 'configparams force-mem-access 1' command is executed.
+18:10:33 INFO  : Context for 'APU' is selected.
+18:10:33 INFO  : 'ps7_init' command is executed.
+18:10:33 INFO  : 'ps7_post_config' command is executed.
+18:10:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:10:34 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:10:34 INFO  : 'configparams force-mem-access 0' command is executed.
+18:10:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:10:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:10:34 INFO  : 'con' command is executed.
+18:10:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+18:10:34 INFO  : Disconnected from the channel tcfchan#39.
+18:49:39 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1578132615919,  Project:1578122442868
+18:49:39 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+19:54:20 INFO  : Copied contents of D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+19:54:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:54:43 INFO  : 
+19:54:44 INFO  : Updating hardware inferred compiler options for aes.
+19:54:44 INFO  : Clearing existing target manager status.
+19:54:44 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+19:54:45 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+19:54:46 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+19:54:46 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+19:54:46 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+19:54:48 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+19:58:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:58:23 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+19:58:23 INFO  : 'jtag frequency' command is executed.
+19:58:23 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:58:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+19:58:26 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+19:58:26 INFO  : Context for 'APU' is selected.
+19:58:26 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+19:58:26 INFO  : 'configparams force-mem-access 1' command is executed.
+19:58:26 INFO  : Context for 'APU' is selected.
+19:58:26 INFO  : 'stop' command is executed.
+19:58:27 INFO  : 'ps7_init' command is executed.
+19:58:27 INFO  : 'ps7_post_config' command is executed.
+19:58:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:58:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:58:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:58:27 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:58:27 INFO  : 'configparams force-mem-access 0' command is executed.
+19:58:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:58:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:58:27 INFO  : 'con' command is executed.
+19:58:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+19:58:27 INFO  : Disconnected from the channel tcfchan#40.
+19:59:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:59:09 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+19:59:09 INFO  : 'jtag frequency' command is executed.
+19:59:09 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:59:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+19:59:11 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+19:59:11 INFO  : Context for 'APU' is selected.
+19:59:11 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+19:59:11 INFO  : 'configparams force-mem-access 1' command is executed.
+19:59:11 INFO  : Context for 'APU' is selected.
+19:59:11 INFO  : 'stop' command is executed.
+19:59:12 INFO  : 'ps7_init' command is executed.
+19:59:12 INFO  : 'ps7_post_config' command is executed.
+19:59:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:59:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:59:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:59:12 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:59:12 INFO  : 'configparams force-mem-access 0' command is executed.
+19:59:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:59:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:59:12 INFO  : 'con' command is executed.
+19:59:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+19:59:12 INFO  : Disconnected from the channel tcfchan#41.
+20:02:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:02:03 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:02:04 INFO  : 'jtag frequency' command is executed.
+20:02:04 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:02:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+20:02:06 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+20:02:06 INFO  : Context for 'APU' is selected.
+20:02:06 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+20:02:06 INFO  : 'configparams force-mem-access 1' command is executed.
+20:02:06 INFO  : Context for 'APU' is selected.
+20:02:07 INFO  : 'stop' command is executed.
+20:02:07 INFO  : 'ps7_init' command is executed.
+20:02:07 INFO  : 'ps7_post_config' command is executed.
+20:02:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:02:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:02:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:02:07 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:02:07 INFO  : 'configparams force-mem-access 0' command is executed.
+20:02:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:02:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:02:08 INFO  : 'con' command is executed.
+20:02:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+20:02:08 INFO  : Disconnected from the channel tcfchan#42.
+20:02:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:02:57 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:02:57 INFO  : 'jtag frequency' command is executed.
+20:02:57 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:02:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+20:03:00 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+20:03:00 INFO  : Context for 'APU' is selected.
+20:03:00 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+20:03:00 INFO  : 'configparams force-mem-access 1' command is executed.
+20:03:00 INFO  : Context for 'APU' is selected.
+20:03:00 INFO  : 'stop' command is executed.
+20:03:00 INFO  : 'ps7_init' command is executed.
+20:03:00 INFO  : 'ps7_post_config' command is executed.
+20:03:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:03:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:03:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:03:01 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:03:01 INFO  : 'configparams force-mem-access 0' command is executed.
+20:03:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:03:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:03:01 INFO  : 'con' command is executed.
+20:03:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+20:03:01 INFO  : Disconnected from the channel tcfchan#43.
+22:31:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:31:38 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:31:38 INFO  : 'jtag frequency' command is executed.
+22:31:39 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:31:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:31:42 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:31:42 INFO  : Context for 'APU' is selected.
+22:31:42 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:31:42 INFO  : 'configparams force-mem-access 1' command is executed.
+22:31:42 INFO  : Context for 'APU' is selected.
+22:31:42 INFO  : 'stop' command is executed.
+22:31:42 INFO  : 'ps7_init' command is executed.
+22:31:42 INFO  : 'ps7_post_config' command is executed.
+22:31:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:31:43 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:31:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:31:43 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:31:43 INFO  : 'configparams force-mem-access 0' command is executed.
+22:31:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:31:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:31:43 INFO  : 'con' command is executed.
+22:31:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:31:43 INFO  : Disconnected from the channel tcfchan#44.
+22:32:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:32:17 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:32:17 INFO  : 'jtag frequency' command is executed.
+22:32:17 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:32:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:32:19 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:32:19 INFO  : Context for 'APU' is selected.
+22:32:19 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:32:19 INFO  : 'configparams force-mem-access 1' command is executed.
+22:32:19 INFO  : Context for 'APU' is selected.
+22:32:19 INFO  : 'stop' command is executed.
+22:32:20 INFO  : 'ps7_init' command is executed.
+22:32:20 INFO  : 'ps7_post_config' command is executed.
+22:32:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:32:20 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:32:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:32:20 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:32:20 INFO  : 'configparams force-mem-access 0' command is executed.
+22:32:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:32:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:32:20 INFO  : 'con' command is executed.
+22:32:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:32:20 INFO  : Disconnected from the channel tcfchan#45.
+22:32:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:32:40 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:32:40 INFO  : 'jtag frequency' command is executed.
+22:32:40 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:32:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:32:42 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:32:42 INFO  : Context for 'APU' is selected.
+22:32:42 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:32:42 INFO  : 'configparams force-mem-access 1' command is executed.
+22:32:42 INFO  : Context for 'APU' is selected.
+22:32:42 INFO  : 'stop' command is executed.
+22:32:43 INFO  : 'ps7_init' command is executed.
+22:32:43 INFO  : 'ps7_post_config' command is executed.
+22:32:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:32:43 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:32:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:32:43 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:32:43 INFO  : 'configparams force-mem-access 0' command is executed.
+22:32:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:32:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:32:43 INFO  : 'con' command is executed.
+22:32:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:32:43 INFO  : Disconnected from the channel tcfchan#46.
+22:33:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:33:34 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:33:34 INFO  : 'jtag frequency' command is executed.
+22:33:34 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:33:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:33:37 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:33:37 INFO  : Context for 'APU' is selected.
+22:33:37 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:33:37 INFO  : 'configparams force-mem-access 1' command is executed.
+22:33:37 INFO  : Context for 'APU' is selected.
+22:33:37 INFO  : 'stop' command is executed.
+22:33:37 INFO  : 'ps7_init' command is executed.
+22:33:37 INFO  : 'ps7_post_config' command is executed.
+22:33:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:33:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:33:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:33:38 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:33:38 INFO  : 'configparams force-mem-access 0' command is executed.
+22:33:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:33:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:33:38 INFO  : 'con' command is executed.
+22:33:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:33:38 INFO  : Disconnected from the channel tcfchan#47.
+22:33:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:33:52 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:33:52 INFO  : 'jtag frequency' command is executed.
+22:33:52 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:33:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:33:54 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:33:54 INFO  : Context for 'APU' is selected.
+22:33:54 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:33:54 INFO  : 'configparams force-mem-access 1' command is executed.
+22:33:54 INFO  : Context for 'APU' is selected.
+22:33:54 INFO  : 'stop' command is executed.
+22:33:55 INFO  : 'ps7_init' command is executed.
+22:33:55 INFO  : 'ps7_post_config' command is executed.
+22:33:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:33:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:33:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:33:55 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:33:55 INFO  : 'configparams force-mem-access 0' command is executed.
+22:33:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:33:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:33:55 INFO  : 'con' command is executed.
+22:33:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:33:55 INFO  : Disconnected from the channel tcfchan#48.
+22:34:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:34:10 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:34:10 INFO  : 'jtag frequency' command is executed.
+22:34:10 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:34:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:34:12 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:34:12 INFO  : Context for 'APU' is selected.
+22:34:12 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:34:12 INFO  : 'configparams force-mem-access 1' command is executed.
+22:34:12 INFO  : Context for 'APU' is selected.
+22:34:12 INFO  : 'stop' command is executed.
+22:34:13 INFO  : 'ps7_init' command is executed.
+22:34:13 INFO  : 'ps7_post_config' command is executed.
+22:34:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:34:13 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:34:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:34:13 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:34:13 INFO  : 'configparams force-mem-access 0' command is executed.
+22:34:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:34:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:34:13 INFO  : 'con' command is executed.
+22:34:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:34:13 INFO  : Disconnected from the channel tcfchan#49.
+22:35:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:35:01 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:35:01 INFO  : 'jtag frequency' command is executed.
+22:35:01 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:35:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:35:04 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:35:04 INFO  : Context for 'APU' is selected.
+22:35:04 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:35:04 INFO  : 'configparams force-mem-access 1' command is executed.
+22:35:04 INFO  : Context for 'APU' is selected.
+22:35:04 INFO  : 'stop' command is executed.
+22:35:04 INFO  : 'ps7_init' command is executed.
+22:35:04 INFO  : 'ps7_post_config' command is executed.
+22:35:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:35:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:05 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:35:05 INFO  : 'configparams force-mem-access 0' command is executed.
+22:35:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:35:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:05 INFO  : 'con' command is executed.
+22:35:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:35:05 INFO  : Disconnected from the channel tcfchan#50.
+22:37:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:37:10 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:37:10 INFO  : 'jtag frequency' command is executed.
+22:37:10 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:37:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:37:13 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:37:13 INFO  : Context for 'APU' is selected.
+22:37:13 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:37:13 INFO  : 'configparams force-mem-access 1' command is executed.
+22:37:13 INFO  : Context for 'APU' is selected.
+22:37:13 INFO  : 'stop' command is executed.
+22:37:13 INFO  : 'ps7_init' command is executed.
+22:37:13 INFO  : 'ps7_post_config' command is executed.
+22:37:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:37:13 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:37:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:37:14 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:37:14 INFO  : 'configparams force-mem-access 0' command is executed.
+22:37:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:37:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:37:14 INFO  : 'con' command is executed.
+22:37:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:37:14 INFO  : Disconnected from the channel tcfchan#51.
+22:40:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:40:41 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:40:41 INFO  : 'jtag frequency' command is executed.
+22:40:41 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:40:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:40:43 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:40:43 INFO  : Context for 'APU' is selected.
+22:40:43 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:40:43 INFO  : 'configparams force-mem-access 1' command is executed.
+22:40:43 INFO  : Context for 'APU' is selected.
+22:40:43 INFO  : 'stop' command is executed.
+22:40:44 INFO  : 'ps7_init' command is executed.
+22:40:44 INFO  : 'ps7_post_config' command is executed.
+22:40:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:40:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:40:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:40:44 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:40:44 INFO  : 'configparams force-mem-access 0' command is executed.
+22:40:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:40:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:40:44 INFO  : 'con' command is executed.
+22:40:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:40:44 INFO  : Disconnected from the channel tcfchan#52.
+22:42:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:42:08 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:42:08 INFO  : 'jtag frequency' command is executed.
+22:42:08 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:42:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:42:10 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:42:10 INFO  : Context for 'APU' is selected.
+22:42:10 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:42:10 INFO  : 'configparams force-mem-access 1' command is executed.
+22:42:10 INFO  : Context for 'APU' is selected.
+22:42:10 INFO  : 'stop' command is executed.
+22:42:11 INFO  : 'ps7_init' command is executed.
+22:42:11 INFO  : 'ps7_post_config' command is executed.
+22:42:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:42:11 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:42:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:42:11 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:42:11 INFO  : 'configparams force-mem-access 0' command is executed.
+22:42:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:42:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:42:11 INFO  : 'con' command is executed.
+22:42:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:42:11 INFO  : Disconnected from the channel tcfchan#53.
+22:42:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:42:31 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:42:31 INFO  : 'jtag frequency' command is executed.
+22:42:31 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:42:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:42:34 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:42:34 INFO  : Context for 'APU' is selected.
+22:42:34 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:42:34 INFO  : 'configparams force-mem-access 1' command is executed.
+22:42:34 INFO  : Context for 'APU' is selected.
+22:42:34 INFO  : 'stop' command is executed.
+22:42:34 INFO  : 'ps7_init' command is executed.
+22:42:34 INFO  : 'ps7_post_config' command is executed.
+22:42:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:42:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:42:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:42:35 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:42:35 INFO  : 'configparams force-mem-access 0' command is executed.
+22:42:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:42:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:42:35 INFO  : 'con' command is executed.
+22:42:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:42:35 INFO  : Disconnected from the channel tcfchan#54.
+22:53:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:53:35 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:53:35 INFO  : 'jtag frequency' command is executed.
+22:53:35 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:53:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:53:37 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:53:37 INFO  : Context for 'APU' is selected.
+22:53:37 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:53:37 INFO  : 'configparams force-mem-access 1' command is executed.
+22:53:37 INFO  : Context for 'APU' is selected.
+22:53:37 INFO  : 'stop' command is executed.
+22:53:38 INFO  : 'ps7_init' command is executed.
+22:53:38 INFO  : 'ps7_post_config' command is executed.
+22:53:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:53:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:38 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:53:38 INFO  : 'configparams force-mem-access 0' command is executed.
+22:53:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:53:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:38 INFO  : 'con' command is executed.
+22:53:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:53:38 INFO  : Disconnected from the channel tcfchan#55.
+22:54:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:55:00 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:55:00 INFO  : 'jtag frequency' command is executed.
+22:55:00 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:55:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:55:02 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:55:02 INFO  : Context for 'APU' is selected.
+22:55:02 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:55:02 INFO  : 'configparams force-mem-access 1' command is executed.
+22:55:02 INFO  : Context for 'APU' is selected.
+22:55:02 INFO  : 'stop' command is executed.
+22:55:03 INFO  : 'ps7_init' command is executed.
+22:55:03 INFO  : 'ps7_post_config' command is executed.
+22:55:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:55:03 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:55:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:55:03 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:55:03 INFO  : 'configparams force-mem-access 0' command is executed.
+22:55:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:55:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:55:03 INFO  : 'con' command is executed.
+22:55:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:55:03 INFO  : Disconnected from the channel tcfchan#56.
+22:55:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:55:45 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:55:45 INFO  : 'jtag frequency' command is executed.
+22:55:45 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:55:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+22:55:48 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:55:48 INFO  : Context for 'APU' is selected.
+22:55:48 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:55:48 INFO  : 'configparams force-mem-access 1' command is executed.
+22:55:48 INFO  : Context for 'APU' is selected.
+22:55:48 INFO  : 'stop' command is executed.
+22:55:48 INFO  : 'ps7_init' command is executed.
+22:55:48 INFO  : 'ps7_post_config' command is executed.
+22:55:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:55:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:55:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:55:49 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:55:49 INFO  : 'configparams force-mem-access 0' command is executed.
+22:55:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:55:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:55:49 INFO  : 'con' command is executed.
+22:55:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+22:55:49 INFO  : Disconnected from the channel tcfchan#57.
+23:16:25 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1578150966778,  Project:1578132615919
+23:16:25 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:16:29 INFO  : Copied contents of D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+23:16:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:16:48 INFO  : 
+23:16:49 INFO  : Updating hardware inferred compiler options for aes.
+23:16:49 INFO  : Clearing existing target manager status.
+23:16:49 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+23:16:50 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+23:16:51 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+23:16:51 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+23:16:51 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:16:53 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:19:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:19:01 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+23:19:01 INFO  : 'jtag frequency' command is executed.
+23:19:01 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:19:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+23:19:04 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:19:04 INFO  : Context for 'APU' is selected.
+23:19:04 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:19:04 INFO  : 'configparams force-mem-access 1' command is executed.
+23:19:04 INFO  : Context for 'APU' is selected.
+23:19:04 INFO  : 'stop' command is executed.
+23:19:04 INFO  : 'ps7_init' command is executed.
+23:19:04 INFO  : 'ps7_post_config' command is executed.
+23:19:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:05 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:19:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:05 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:19:05 INFO  : 'configparams force-mem-access 0' command is executed.
+23:19:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:19:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:05 INFO  : 'con' command is executed.
+23:19:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+23:19:05 INFO  : Disconnected from the channel tcfchan#58.
+23:20:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:20:04 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+23:20:04 INFO  : 'jtag frequency' command is executed.
+23:20:04 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:20:04 INFO  : Context for 'APU' is selected.
+23:20:04 INFO  : System reset is completed.
+23:20:07 INFO  : 'after 3000' command is executed.
+23:20:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+23:20:09 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:20:09 INFO  : Context for 'APU' is selected.
+23:20:09 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:20:09 INFO  : 'configparams force-mem-access 1' command is executed.
+23:20:09 INFO  : Context for 'APU' is selected.
+23:20:10 INFO  : 'ps7_init' command is executed.
+23:20:10 INFO  : 'ps7_post_config' command is executed.
+23:20:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:20:10 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:20:10 INFO  : 'configparams force-mem-access 0' command is executed.
+23:20:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:20:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:20:10 INFO  : 'con' command is executed.
+23:20:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+23:20:10 INFO  : Disconnected from the channel tcfchan#59.
+23:34:23 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1578152045768,  Project:1578150966778
+23:34:23 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:34:49 INFO  : Copied contents of D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+23:34:56 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:35:10 INFO  : 
+23:35:11 INFO  : Updating hardware inferred compiler options for aes.
+23:35:11 INFO  : Clearing existing target manager status.
+23:35:11 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+23:35:12 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+23:35:13 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+23:35:13 INFO  : Closing and re-opening the MSS file of ther project aes_bsp
+23:35:13 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:35:16 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:36:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:36:45 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+23:36:45 INFO  : 'jtag frequency' command is executed.
+23:36:45 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:36:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+23:36:47 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:36:47 INFO  : Context for 'APU' is selected.
+23:36:47 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:36:47 INFO  : 'configparams force-mem-access 1' command is executed.
+23:36:47 INFO  : Context for 'APU' is selected.
+23:36:47 INFO  : 'stop' command is executed.
+23:36:48 INFO  : 'ps7_init' command is executed.
+23:36:48 INFO  : 'ps7_post_config' command is executed.
+23:36:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:36:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:36:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:36:48 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:36:48 INFO  : 'configparams force-mem-access 0' command is executed.
+23:36:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:36:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:36:49 INFO  : 'con' command is executed.
+23:36:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+23:36:49 INFO  : Disconnected from the channel tcfchan#60.
+23:45:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:45:50 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+23:45:50 INFO  : 'jtag frequency' command is executed.
+23:45:50 INFO  : Sourcing of 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:45:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+23:45:53 INFO  : FPGA configured successfully with bitstream "D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:45:53 INFO  : Context for 'APU' is selected.
+23:45:53 INFO  : Hardware design information is loaded from 'D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:45:53 INFO  : 'configparams force-mem-access 1' command is executed.
+23:45:53 INFO  : Context for 'APU' is selected.
+23:45:53 INFO  : 'stop' command is executed.
+23:45:53 INFO  : 'ps7_init' command is executed.
+23:45:53 INFO  : 'ps7_post_config' command is executed.
+23:45:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:45:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:45:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:45:54 INFO  : The application 'D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:45:54 INFO  : 'configparams force-mem-access 0' command is executed.
+23:45:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw D:/FPGA/AES_system/AES_system.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow D:/FPGA/AES_system/AES_system.sdk/aes/Debug/aes.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:45:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:45:54 INFO  : 'con' command is executed.
+23:45:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+23:45:54 INFO  : Disconnected from the channel tcfchan#61.

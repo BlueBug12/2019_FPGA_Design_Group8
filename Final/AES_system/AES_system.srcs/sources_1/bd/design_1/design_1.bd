@@ -9,14 +9,14 @@
       "validated": "true"
     },
     "design_tree": {
-      "AES_system_0": "",
       "proc_sys_reset_0": "",
       "processing_system7_0": "",
       "ps7_0_axi_periph": {
         "s00_couplers": {
           "auto_pc": ""
         }
-      }
+      },
+      "AES_system_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -85,10 +85,6 @@
       }
     },
     "components": {
-      "AES_system_0": {
-        "vlnv": "xilinx.com:user:AES_system:1.0",
-        "xci_name": "design_1_AES_system_0_0"
-      },
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_proc_sys_reset_0_0"
@@ -1800,16 +1796,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -1869,6 +1865,10 @@
             ]
           }
         }
+      },
+      "AES_system_0": {
+        "vlnv": "xilinx.com:user:AES_system:1.0",
+        "xci_name": "design_1_AES_system_0_0"
       }
     },
     "interface_nets": {
@@ -1904,24 +1904,29 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
           "proc_sys_reset_0/slowest_sync_clk",
-          "AES_system_0/s00_axi_aclk",
           "ps7_0_axi_periph/M00_ACLK",
-          "ps7_0_axi_periph/ACLK"
-        ]
-      },
-      "proc_sys_reset_0_peripheral_aresetn": {
-        "ports": [
-          "proc_sys_reset_0/peripheral_aresetn",
-          "ps7_0_axi_periph/S00_ARESETN",
-          "AES_system_0/s00_axi_aresetn",
-          "ps7_0_axi_periph/M00_ARESETN",
-          "ps7_0_axi_periph/ARESETN"
+          "ps7_0_axi_periph/ACLK",
+          "AES_system_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "ARESETN_1": {
+        "ports": [
+          "proc_sys_reset_0/interconnect_aresetn",
+          "ps7_0_axi_periph/ARESETN"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "ps7_0_axi_periph/S00_ARESETN",
+          "ps7_0_axi_periph/M00_ARESETN",
+          "AES_system_0/s00_axi_aresetn"
         ]
       }
     },

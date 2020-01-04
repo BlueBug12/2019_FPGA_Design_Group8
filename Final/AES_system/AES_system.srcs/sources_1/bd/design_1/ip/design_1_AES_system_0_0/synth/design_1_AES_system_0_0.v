@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:AES_system:1.0
-// IP Revision: 2
+// IP Revision: 5
 
 (* X_CORE_INFO = "AES_system_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_AES_system_0_0,AES_system_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_1_AES_system_0_0,AES_system_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=AES_system,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=7}" *)
+(* CORE_GENERATION_INFO = "design_1_AES_system_0_0,AES_system_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=AES_system,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=7}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_AES_system_0_0 (
   s00_axi_awaddr,

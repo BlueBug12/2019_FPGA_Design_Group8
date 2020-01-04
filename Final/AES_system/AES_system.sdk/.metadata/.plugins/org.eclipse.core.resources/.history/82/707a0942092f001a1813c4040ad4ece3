@@ -1,0 +1,82 @@
+/*
+ * main.c
+ *
+ *  Created on: 2020¦~1¤ë4¤é
+ *      Author: User
+ */
+
+
+#include <stdio.h>
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+#include "AES_system.h"
+
+int main()
+{
+
+	printf("Program Start.\n\r");
+	printf("Encode.\n\r");
+	printf("Data.\n\r");
+	write_data(3,0x33221100);
+	printf(" %x\r\n", 0x33221100);
+	write_data(2,0x77665544);
+	printf(" %x\r\n", 0x77665544);
+	write_data(1,0xbbaa9988);
+	printf(" %x\r\n", 0xbbaa9988);
+	write_data(0,0xffeeddcc);
+	printf(" %x\r\n", 0xffeeddcc);
+
+	printf("Key.\n\r");
+
+	write_data(7,0x03020100);
+	printf(" %x\r\n",0X03020100 );
+	write_data(6,0x07060504);
+	printf(" %x\r\n", 0X07060504);
+	write_data(5,0x0b0a0908);
+	printf(" %x\r\n", 0x0b0a0908);
+	write_data(4,0x0f0e0d0c);
+	printf(" %x\r\n",0x0f0e0d0c);
+
+	printf("Encoding result\n\r");
+	read_en1();
+
+	printf(" %x\r\n", read_data1(1));
+	printf(" %x\r\n", read_data1(2));
+	printf(" %x\r\n", read_data1(3));
+	printf(" %x\r\n", read_data1(4));
+
+
+	printf("Decode\n\r");
+	printf("Data.\n\r");
+
+	write_data(12,read_data1(1));
+	printf(" %x\r\n", read_data1(1));
+	write_data(11,read_data1(2));
+	printf(" %x\r\n", read_data1(2));
+	write_data(10,read_data1(3));
+	printf(" %x\r\n", read_data1(3));
+	write_data(9,read_data1(4));
+	printf(" %x\r\n", read_data1(4));
+
+	printf("Key.\n\r");
+	write_data(16,0X03020100);
+	printf(" %x\r\n",0X03020100 );
+	write_data(15,0x07060504);
+	printf(" %x\r\n", 0X07060504);
+	write_data(14,0x0b0a0908);
+	printf(" %x\r\n", 0x0b0a0908);
+	write_data(13,0x0f0e0d0c);
+	printf(" %x\r\n",0x0f0e0d0c);
+*/
+
+	printf("result.\n\r");
+	read_en2();
+	printf(" %x\r\n", read_data2(6));
+	printf(" %x\r\n", read_data2(7));
+	printf(" %x\r\n", read_data2(8));
+	printf(" %x\r\n", read_data2(9));
+
+	printf("Program End.\n\r");
+	return 0;
+}

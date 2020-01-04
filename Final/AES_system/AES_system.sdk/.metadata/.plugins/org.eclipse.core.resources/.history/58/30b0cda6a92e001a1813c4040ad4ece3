@@ -1,0 +1,37 @@
+/*
+ * main.c
+ *
+ *  Created on: 2020¦~1¤ë4¤é
+ *      Author: User
+ */
+
+
+#include <stdio.h>
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+#include "AES_system.h"
+
+int main()
+{
+
+	printf("Program Start.\n\r");
+	write_data(0,0Xa8f64332);
+	printf(" %x\r\n", 0Xa8f64332);
+	write_data(1,0X8d305a88);
+	write_data(2,0Xa2983131);
+	write_data(3,0X340737e0);
+	read_en1();
+	printf("Input A:");
+	printf(" %x\r\n", read_data1(1));
+	printf("Input B:");
+	printf(" %x\r\n", read_data1(2));
+	printf("Input C:");
+	printf(" %x\r\n", read_data1(3));
+	printf("Input D:");
+	printf(" %x\r\n", read_data1(4));
+
+
+	printf("Program End.\n\r");
+    return 0;
+}

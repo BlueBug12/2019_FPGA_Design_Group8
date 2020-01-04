@@ -1,0 +1,82 @@
+/*
+ * main.c
+ *
+ *  Created on: 2020¦~1¤ë4¤é
+ *      Author: User
+ */
+
+
+#include <stdio.h>
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+#include "AES_system.h"
+
+int main()
+{
+
+	printf("Program Start.\n\r");
+	printf("Encode.\n\r");
+	printf("Data.\n\r");
+	write_data(3,0Xa8f64332);
+	printf(" %04x\r\n", 0Xa8f64332);
+	write_data(2,0X8d305a88);
+	printf(" %04x\r\n", 0X8d305a88);
+	write_data(1,0Xa2983131);
+	printf(" %x\r\n", 0Xa2983131);
+	write_data(0,0X340737e0);
+	printf(" %x\r\n", 0X340737e0);
+
+	printf("Key.\n\r");
+	write_data(7,0X16157e2b);
+	printf(" %x\r\n", 0X16157e2b);
+	write_data(6,0Xa6d2ae28);
+	printf(" %x\r\n", 0Xa6d2ae28);
+	write_data(5,0X8815f7ab);
+	printf(" %x\r\n", 0X8815f7ab);
+	write_data(4,0X3c4fcf09);
+	printf(" %x\r\n", 0X3c4fcf09);
+	printf("Encoding result\n");
+	read_en1();
+	//printf("Input A:");
+	printf(" %x\r\n", read_data1(4));
+	//printf("Input B:");
+	printf(" %x\r\n", read_data1(3));
+	//printf("Input C:");
+	printf(" %x\r\n", read_data1(2));
+	//printf("Input D:");
+	printf(" %x\r\n", read_data1(1));
+
+
+	printf("Decode\n\r");
+	write_data(12,read_data1(4));
+	printf(" %x\r\n", read_data1(4));
+	write_data(11,read_data1(3));
+	printf(" %x\r\n", read_data1(3));
+	write_data(10,read_data1(2));
+	printf(" %x\r\n", read_data1(2));
+	write_data(9,read_data1(1));
+	printf(" %x\r\n", read_data1(1));
+
+	printf("Key.\n\r");
+	write_data(16,0X16157e2b);
+	printf(" %x\r\n", 0X16157e2b);
+	write_data(15,0Xa6d2ae28);
+	printf(" %x\r\n", 0Xa6d2ae28);
+	write_data(14,0X8815f7ab);
+	printf(" %x\r\n", 0X8815f7ab);
+	write_data(13,0X3c4fcf09);
+	printf(" %x\r\n", 0X3c4fcf09);
+
+	read_en2();
+	printf(" %x\r\n", read_data2(9));
+	//printf("Input B:");
+	printf(" %x\r\n", read_data2(8));
+	//printf("Input C:");
+	printf(" %x\r\n", read_data2(7));
+	//printf("Input D:");
+	printf(" %x\r\n", read_data2(6));
+
+	printf("Program End.\n\r");
+    return 0;
+}

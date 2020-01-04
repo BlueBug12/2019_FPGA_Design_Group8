@@ -1,0 +1,19 @@
+
+
+/***************************** Include Files *******************************/
+#include "AES_system.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+/************************** Function Definitions ***************************/
+
+void	write_data(u32 index, u32 data)
+{
+	AES_SYSTEM_mWriteReg(XPAR_AES_SYSTEM_0_S00_AXI_BASEADDR, index, data);
+}
+
+u32 read_data(u32 index)
+{
+	AES_SYSTEM_mReadReg (XPAR_AES_SYSTEM_0_S00_AXI_BASEADDR, index);			//data_out
+    return data;
+}

@@ -1,0 +1,827 @@
+
+*** Running vivado
+    with args -log design_1_AES_system_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_AES_system_0_0.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_AES_system_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/IP/AES_system_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/IP/AES_sytem_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_AES_system_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12756 
+WARNING: [Synth 8-6901] identifier 'out_data1' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:534]
+WARNING: [Synth 8-6901] identifier 'out_data1' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:535]
+WARNING: [Synth 8-6901] identifier 'out_data1' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:536]
+WARNING: [Synth 8-6901] identifier 'out_data1' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:537]
+WARNING: [Synth 8-6901] identifier 'done1' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:538]
+WARNING: [Synth 8-6901] identifier 'out_data2' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:539]
+WARNING: [Synth 8-6901] identifier 'out_data2' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:540]
+WARNING: [Synth 8-6901] identifier 'out_data2' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:541]
+WARNING: [Synth 8-6901] identifier 'out_data2' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:542]
+WARNING: [Synth 8-6901] identifier 'done2' is used before its declaration [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:543]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 745.848 ; gain = 185.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_AES_system_0_0' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ip/design_1_AES_system_0_0/synth/design_1_AES_system_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'AES_system_v1_0' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AES_system_v1_0_S00_AXI' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AES' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:32]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:118]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:157]
+INFO: [Synth 8-6155] done synthesizing module 'AES' (1#1) [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:32]
+INFO: [Synth 8-6157] synthesizing module 'INV_AES' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:11]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:140]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'INV_AES' (2#1) [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'AES_system_v1_0_S00_AXI' (3#1) [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'AES_system_v1_0' (4#1) [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/hdl/AES_system_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_AES_system_0_0' (5#1) [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ip/design_1_AES_system_0_0/synth/design_1_AES_system_0_0.v:57]
+WARNING: [Synth 8-3331] design AES_system_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design AES_system_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design AES_system_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design AES_system_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design AES_system_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design AES_system_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1064.949 ; gain = 504.301
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1064.949 ; gain = 504.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1064.949 ; gain = 504.301
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1178.402 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.775 . Memory (MB): peak = 1202.793 ; gain = 24.391
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'fourth_column_key_reg[3][7:0]' into 'round_key_reg[15][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'fourth_column_key_reg[2][7:0]' into 'round_key_reg[14][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'fourth_column_key_reg[1][7:0]' into 'round_key_reg[13][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'fourth_column_key_reg[0][7:0]' into 'round_key_reg[12][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[3][7:0]' into 's_box_reg[191][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[4][7:0]' into 's_box_reg[124][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[6][7:0]' into 's_box_reg[114][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[1][7:0]' into 's_box_reg[106][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[5][7:0]' into 's_box_reg[84][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 's_box_reg[74][7:0]' into 's_box_reg[96][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[8][7:0]' into 's_box_reg[68][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[7][7:0]' into 's_box_reg[58][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[2][7:0]' into 's_box_reg[48][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[9][7:0]' into 's_box_reg[36][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[0][7:0]' into 's_box_reg[9][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:56]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'AES'
+INFO: [Synth 8-5544] ROM "out_data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'Rcon_reg[2][7:0]' into 'inv_s_box_reg[242][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[7][7:0]' into 'inv_s_box_reg[205][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[4][7:0]' into 'inv_s_box_reg[202][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[5][7:0]' into 'inv_s_box_reg[183][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[8][7:0]' into 'inv_s_box_reg[175][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[0][7:0]' into 'inv_s_box_reg[124][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[1][7:0]' into 'inv_s_box_reg[119][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[3][7:0]' into 'inv_s_box_reg[48][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[6][7:0]' into 'inv_s_box_reg[9][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 'Rcon_reg[9][7:0]' into 'inv_s_box_reg[5][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[255][7:0]' into 'inv_s_box_reg[71][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[254][7:0]' into 'inv_s_box_reg[234][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[253][7:0]' into 'inv_s_box_reg[32][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[252][7:0]' into 'inv_s_box_reg[231][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[251][7:0]' into 'inv_s_box_reg[118][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[250][7:0]' into 'inv_s_box_reg[216][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[249][7:0]' into 'inv_s_box_reg[238][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[248][7:0]' into 'inv_s_box_reg[131][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[247][7:0]' into 'inv_s_box_reg[69][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[246][7:0]' into 'inv_s_box_reg[44][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[245][7:0]' into 'inv_s_box_reg[142][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[244][7:0]' into 'inv_s_box_reg[8][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[243][7:0]' into 'inv_s_box_reg[215][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[242][7:0]' into 'inv_s_box_reg[167][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[241][7:0]' into 'inv_s_box_reg[50][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[240][7:0]' into 'inv_s_box_reg[100][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[239][7:0]' into 'inv_s_box_reg[158][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[238][7:0]' into 'inv_s_box_reg[52][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[237][7:0]' into 'inv_s_box_reg[252][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[236][7:0]' into 'inv_s_box_reg[139][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[235][7:0]' into 'inv_s_box_reg[30][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[234][7:0]' into 'inv_s_box_reg[23][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[233][7:0]' into 'inv_s_box_reg[114][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[232][7:0]' into 'inv_s_box_reg[20][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[231][7:0]' into 'inv_s_box_reg[34][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[230][7:0]' into 'inv_s_box_reg[25][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[229][7:0]' into 'inv_s_box_reg[53][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[228][7:0]' into 'inv_s_box_reg[249][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[227][7:0]' into 'inv_s_box_reg[130][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[226][7:0]' into 'inv_s_box_reg[70][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[225][7:0]' into 'inv_s_box_reg[65][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[224][7:0]' into 'inv_s_box_reg[248][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[223][7:0]' into 'inv_s_box_reg[11][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[222][7:0]' into 'inv_s_box_reg[164][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[221][7:0]' into 'inv_s_box_reg[120][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[220][7:0]' into 'inv_s_box_reg[68][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[219][7:0]' into 'inv_s_box_reg[86][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[218][7:0]' into 'inv_s_box_reg[91][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[217][7:0]' into 'inv_s_box_reg[150][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[216][7:0]' into 'inv_s_box_reg[239][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[215][7:0]' into 'inv_s_box_reg[171][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[214][7:0]' into 'inv_s_box_reg[66][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[213][7:0]' into 'inv_s_box_reg[123][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[212][7:0]' into 'inv_s_box_reg[82][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[211][7:0]' into 'inv_s_box_reg[51][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[210][7:0]' into 'inv_s_box_reg[213][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[209][7:0]' into 'inv_s_box_reg[178][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[208][7:0]' into 'inv_s_box_reg[81][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[207][7:0]' into 'inv_s_box_reg[126][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[206][7:0]' into 'inv_s_box_reg[61][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[205][7:0]' into 'inv_s_box_reg[122][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[204][7:0]' into 'inv_s_box_reg[179][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[203][7:0]' into 'inv_s_box_reg[192][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[202][7:0]' into 'inv_s_box_reg[146][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[201][7:0]' into 'inv_s_box_reg[193][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[200][7:0]' into 'inv_s_box_reg[155][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[199][7:0]' into 'inv_s_box_reg[180][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[198][7:0]' into 'inv_s_box_reg[141][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[197][7:0]' into 'inv_s_box_reg[36][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[196][7:0]' into 'inv_s_box_reg[156][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[195][7:0]' into 'inv_s_box_reg[49][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[194][7:0]' into 'inv_s_box_reg[63][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[193][7:0]' into 'inv_s_box_reg[188][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[192][7:0]' into 'inv_s_box_reg[244][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[191][7:0]' into 'inv_s_box_reg[48][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[190][7:0]' into 'inv_s_box_reg[228][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[189][7:0]' into 'inv_s_box_reg[218][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[188][7:0]' into 'inv_s_box_reg[77][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[187][7:0]' into 'inv_s_box_reg[135][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[186][7:0]' into 'inv_s_box_reg[191][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[185][7:0]' into 'inv_s_box_reg[177][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[184][7:0]' into 'inv_s_box_reg[80][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[183][7:0]' into 'inv_s_box_reg[211][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[182][7:0]' into 'inv_s_box_reg[47][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Synth 8-4471] merging register 's_box_reg[181][7:0]' into 'inv_s_box_reg[3][7:0]' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:66]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:121]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:121]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              000 |                             0000
+                 iSTATE1 |                              001 |                             0001
+                 iSTATE5 |                              010 |                             0010
+                 iSTATE3 |                              011 |                             0110
+                 iSTATE2 |                              100 |                             0011
+                  iSTATE |                              101 |                             0100
+                 iSTATE4 |                              110 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'AES'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/aes.v:121]
+WARNING: [Synth 8-327] inferring latch for variable 'n_state_reg' [d:/FPGA/AES_system/AES_system.srcs/sources_1/bd/design_1/ipshared/b72d/src/inv_aes.v:143]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |AES__GB0                     |           1|     35055|
+|2     |AES__GB1                     |           1|     10200|
+|3     |INV_AES__GB0                 |           1|     36129|
+|4     |INV_AES__GB1                 |           1|     10466|
+|5     |INV_AES__GB2                 |           1|     28081|
+|6     |INV_AES__GB3                 |           1|     30617|
+|7     |INV_AES__GB4                 |           1|      7828|
+|8     |INV_AES__GB5                 |           1|      9844|
+|9     |AES_system_v1_0_S00_AXI__GC0 |           1|      5237|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   4 Input      8 Bit         XORs := 11    
+	   2 Input      8 Bit         XORs := 142   
+	   6 Input      8 Bit         XORs := 4     
+	   5 Input      8 Bit         XORs := 3     
+	   7 Input      8 Bit         XORs := 7     
+	   3 Input      8 Bit         XORs := 12    
+	   8 Input      8 Bit         XORs := 5     
+	   9 Input      8 Bit         XORs := 2     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 21    
+	                8 Bit    Registers := 755   
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 32    
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   7 Input    128 Bit        Muxes := 2     
+	  10 Input    128 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 20    
+	  21 Input     32 Bit        Muxes := 20    
+	   7 Input      8 Bit        Muxes := 16    
+	   2 Input      8 Bit        Muxes := 176   
+	  16 Input      8 Bit        Muxes := 70    
+	  10 Input      8 Bit        Muxes := 20    
+	   4 Input      8 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 70    
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	  10 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 7     
+	  10 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 2     
+	  26 Input      1 Bit        Muxes := 161   
+	  11 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+	  23 Input      1 Bit        Muxes := 1     
+	  24 Input      1 Bit        Muxes := 1     
+	  25 Input      1 Bit        Muxes := 1     
+	  22 Input      1 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 1     
+	  20 Input      1 Bit        Muxes := 1     
+	  19 Input      1 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module AES 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   4 Input      8 Bit         XORs := 11    
+	   2 Input      8 Bit         XORs := 38    
+	   6 Input      8 Bit         XORs := 3     
+	   5 Input      8 Bit         XORs := 1     
+	   7 Input      8 Bit         XORs := 1     
+	   3 Input      8 Bit         XORs := 5     
++---Registers : 
+	              128 Bit    Registers := 1     
+	                8 Bit    Registers := 271   
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   7 Input    128 Bit        Muxes := 2     
+	   7 Input      8 Bit        Muxes := 16    
+	   7 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1     
+Module INV_AES 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 104   
+	   7 Input      8 Bit         XORs := 6     
+	   8 Input      8 Bit         XORs := 5     
+	   9 Input      8 Bit         XORs := 2     
+	   6 Input      8 Bit         XORs := 1     
+	   5 Input      8 Bit         XORs := 2     
+	   3 Input      8 Bit         XORs := 7     
++---Registers : 
+	              128 Bit    Registers := 1     
+	                8 Bit    Registers := 484   
+	                5 Bit    Registers := 32    
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  10 Input    128 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 176   
+	  16 Input      8 Bit        Muxes := 70    
+	  10 Input      8 Bit        Muxes := 20    
+	   4 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 70    
+	  10 Input      2 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 2     
+	  26 Input      1 Bit        Muxes := 161   
+	  11 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+	  23 Input      1 Bit        Muxes := 1     
+	  24 Input      1 Bit        Muxes := 1     
+	  25 Input      1 Bit        Muxes := 1     
+	  22 Input      1 Bit        Muxes := 1     
+	  21 Input      1 Bit        Muxes := 1     
+	  20 Input      1 Bit        Muxes := 1     
+	  19 Input      1 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
+Module AES_system_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 21    
+	                7 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 20    
+	  21 Input     32 Bit        Muxes := 20    
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design design_1_AES_system_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_AES_system_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_AES_system_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_AES_system_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_AES_system_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_AES_system_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'AES_system_v1_0_S00_AXI_insti_8/axi_rresp_reg[0]' (FDRE) to 'AES_system_v1_0_S00_AXI_insti_8/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (AES_system_v1_0_S00_AXI_insti_8/\axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'AES_system_v1_0_S00_AXI_insti_8/axi_bresp_reg[0]' (FDRE) to 'AES_system_v1_0_S00_AXI_insti_8/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (AES_system_v1_0_S00_AXI_insti_8/\axi_bresp_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[255][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[254][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[253][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[252][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[251][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[250][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[249][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[248][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[247][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[246][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[245][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[244][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[243][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[242][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[241][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[255][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[254][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[253][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[252][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[251][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[250][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[249][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[248][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[247][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[246][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[245][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[244][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[243][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[242][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[241][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[255][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[254][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[253][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[252][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[251][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[250][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[249][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[248][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[247][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[246][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[245][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[244][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[243][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[242][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[241][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[255][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[254][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[253][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[252][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[251][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[250][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[249][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[248][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[247][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[246][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[245][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[244][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[243][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[242][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[241][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[255][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[254][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[253][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[252][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[251][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[250][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[249][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[248][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[247][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[246][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[245][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[244][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[243][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[242][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[241][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[255][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[254][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[253][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[252][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[251][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[250][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[249][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[248][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[247][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[246][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[245][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[244][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[243][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[242][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[241][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[255][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[254][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[253][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[252][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[251][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[250][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_box_reg[249][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_box_reg[248][6] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'OF4_reg[0][0]' (FDE) to 'GF2_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[2][0]' (FDE) to 'GF2_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[0][1]' (FDE) to 'GF2_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[2][1]' (FDE) to 'GF2_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[0][2]' (FDE) to 'OF8_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[2][2]' (FDE) to 'OF8_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[0][3]' (FDE) to 'GF2_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[2][3]' (FDE) to 'GF2_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[0][4]' (FDE) to 'GF2_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[2][4]' (FDE) to 'GF2_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[0][0]' (FDE) to 'GF4_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[1][0]' (FDE) to 'GF4_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[2][0]' (FDE) to 'GF4_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[3][0]' (FDE) to 'GF4_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[1][0]' (FDE) to 'OF4_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[3][0]' (FDE) to 'GF2_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[0][1]' (FDE) to 'GF4_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[1][1]' (FDE) to 'GF4_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[2][1]' (FDE) to 'GF4_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[3][1]' (FDE) to 'GF4_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[1][1]' (FDE) to 'OF4_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[3][1]' (FDE) to 'GF2_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[0][2]' (FDE) to 'OF4_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[1][2]' (FDE) to 'OF4_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[2][2]' (FDE) to 'OF4_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[3][2]' (FDE) to 'OF4_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[1][2]' (FDE) to 'OF4_reg[3][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[3][2]' (FDE) to 'OF4_reg[6][2]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[0][3]' (FDE) to 'GF4_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[1][3]' (FDE) to 'GF4_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[2][3]' (FDE) to 'GF4_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[3][3]' (FDE) to 'GF4_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[1][3]' (FDE) to 'OF4_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[3][3]' (FDE) to 'GF2_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[0][4]' (FDE) to 'GF4_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[1][4]' (FDE) to 'GF4_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[2][4]' (FDE) to 'GF4_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[3][4]' (FDE) to 'GF4_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[1][4]' (FDE) to 'GF2_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[3][4]' (FDE) to 'GF2_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[6][0]' (FDE) to 'OF4_reg[6][1]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[4][0]' (FDE) to 'GF2_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[6][1]' (FDE) to 'OF4_reg[6][3]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[4][1]' (FDE) to 'GF2_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[6][2]' (FDE) to 'OF4_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[4][2]' (FDE) to 'OF8_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[6][3]' (FDE) to 'OF4_reg[6][4]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[4][3]' (FDE) to 'GF2_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[6][4]' (FDE) to 'GF2_reg[6][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[4][4]' (FDE) to 'GF2_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[7][0]' (FDE) to 'OF4_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[4][0]' (FDE) to 'GF4_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[5][0]' (FDE) to 'GF2_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[5][0]' (FDE) to 'GF4_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[7][0]' (FDE) to 'GF4_reg[7][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[6][0]' (FDE) to 'GF4_reg[6][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[7][1]' (FDE) to 'OF4_reg[7][3]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[4][1]' (FDE) to 'GF4_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[5][1]' (FDE) to 'GF2_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[5][1]' (FDE) to 'GF4_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[7][1]' (FDE) to 'GF4_reg[7][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[6][1]' (FDE) to 'GF4_reg[6][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[7][2]' (FDE) to 'OF8_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[4][2]' (FDE) to 'OF4_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[5][2]' (FDE) to 'OF8_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[5][2]' (FDE) to 'OF8_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[7][2]' (FDE) to 'OF8_reg[6][2]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[6][2]' (FDE) to 'OF4_reg[10][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[7][3]' (FDE) to 'OF4_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[4][3]' (FDE) to 'GF4_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[5][3]' (FDE) to 'GF2_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[5][3]' (FDE) to 'GF4_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[7][3]' (FDE) to 'GF4_reg[7][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[6][3]' (FDE) to 'GF4_reg[6][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[7][4]' (FDE) to 'GF2_reg[7][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[4][4]' (FDE) to 'GF4_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[5][4]' (FDE) to 'GF2_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[5][4]' (FDE) to 'GF4_reg[5][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[7][4]' (FDE) to 'GF4_reg[7][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[6][4]' (FDE) to 'GF4_reg[6][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[10][0]' (FDE) to 'OF4_reg[10][1]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[8][0]' (FDE) to 'OF4_reg[8][1]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[10][1]' (FDE) to 'OF4_reg[10][3]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[8][1]' (FDE) to 'OF4_reg[8][3]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[10][2]' (FDE) to 'OF4_reg[8][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[8][2]' (FDE) to 'OF8_reg[8][2]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[10][3]' (FDE) to 'OF4_reg[10][4]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[8][3]' (FDE) to 'OF4_reg[8][4]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[10][4]' (FDE) to 'GF2_reg[10][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[8][4]' (FDE) to 'GF2_reg[8][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[8][0]' (FDE) to 'GF4_reg[8][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[9][0]' (FDE) to 'GF2_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[11][0]' (FDE) to 'GF2_reg[11][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[10][0]' (FDE) to 'GF4_reg[10][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[11][0]' (FDE) to 'GF4_reg[11][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[9][0]' (FDE) to 'GF4_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'OF8_reg[8][1]' (FDE) to 'GF4_reg[8][7]'
+INFO: [Synth 8-3886] merging instance 'OF4_reg[9][1]' (FDE) to 'GF2_reg[9][7]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port P[8] driven by constant 0
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port P[0] driven by constant 0
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port O23[3] driven by constant 0
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port O23[2] driven by constant 0
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port O23[1] driven by constant 0
+WARNING: [Synth 8-3917] design INV_AES__GB3 has port O23[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:51 ; elapsed = 00:02:19 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |AES__GB0                     |           1|     34649|
+|2     |AES__GB1                     |           1|      1632|
+|3     |INV_AES__GB0                 |           1|     35096|
+|4     |INV_AES__GB1                 |           1|      1811|
+|5     |INV_AES__GB2                 |           1|      5752|
+|6     |INV_AES__GB3                 |           1|      3251|
+|7     |INV_AES__GB4                 |           1|      2382|
+|8     |INV_AES__GB5                 |           1|      4734|
+|9     |AES_system_v1_0_S00_AXI__GC0 |           1|      1472|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:00 ; elapsed = 00:02:29 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:31 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |AES__GB0                     |           1|      8487|
+|2     |AES__GB1                     |           1|      1632|
+|3     |INV_AES__GB0                 |           1|      8984|
+|4     |INV_AES__GB1                 |           1|      1811|
+|5     |INV_AES__GB2                 |           1|      1892|
+|6     |INV_AES__GB3                 |           1|      3251|
+|7     |INV_AES__GB4                 |           1|      1148|
+|8     |INV_AES__GB5                 |           1|      2140|
+|9     |AES_system_v1_0_S00_AXI__GC0 |           1|      1472|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:06 ; elapsed = 00:02:35 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:09 ; elapsed = 00:02:37 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:09 ; elapsed = 00:02:37 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:09 ; elapsed = 00:02:38 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:09 ; elapsed = 00:02:38 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:10 ; elapsed = 00:02:39 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:10 ; elapsed = 00:02:39 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |    32|
+|2     |LUT2  |   348|
+|3     |LUT3  |   706|
+|4     |LUT4  |   559|
+|5     |LUT5  |  1010|
+|6     |LUT6  |  3289|
+|7     |MUXF7 |   788|
+|8     |MUXF8 |   261|
+|9     |FDCE  |     5|
+|10    |FDRE  |  2703|
+|11    |FDSE  |   220|
+|12    |LD    |     7|
++------+------+------+
+
+Report Instance Areas: 
++------+---------------------------------+------------------------+------+
+|      |Instance                         |Module                  |Cells |
++------+---------------------------------+------------------------+------+
+|1     |top                              |                        |  9928|
+|2     |  inst                           |AES_system_v1_0         |  9928|
+|3     |    AES_system_v1_0_S00_AXI_inst |AES_system_v1_0_S00_AXI |  9928|
+|4     |      aes                        |AES                     |  2177|
+|5     |      inv_aes                    |INV_AES                 |  6942|
++------+---------------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:10 ; elapsed = 00:02:39 . Memory (MB): peak = 1202.793 ; gain = 642.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:33 ; elapsed = 00:02:28 . Memory (MB): peak = 1202.793 ; gain = 504.301
+Synthesis Optimization Complete : Time (s): cpu = 00:02:10 ; elapsed = 00:02:40 . Memory (MB): peak = 1202.793 ; gain = 642.145
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1056 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1202.793 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  LD => LDCE: 7 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+339 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:18 ; elapsed = 00:02:50 . Memory (MB): peak = 1202.793 ; gain = 912.734
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1202.793 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA/AES_system/AES_system.runs/design_1_AES_system_0_0_synth_1/design_1_AES_system_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_AES_system_0_0, cache-ID = 2c0d9604bff66193
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1202.793 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA/AES_system/AES_system.runs/design_1_AES_system_0_0_synth_1/design_1_AES_system_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_AES_system_0_0_utilization_synth.rpt -pb design_1_AES_system_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  4 09:17:19 2020...

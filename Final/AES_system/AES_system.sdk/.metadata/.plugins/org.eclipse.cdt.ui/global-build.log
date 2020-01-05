@@ -11390,3 +11390,962 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
+20:32:49 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:49:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(1));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:50:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(2));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:51:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(3));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:52:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(4));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:59:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(1));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:61:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(2));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:63:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(3));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:65:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(4));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:80:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(6));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:81:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(7));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:82:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(8));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:83:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(9));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57564	   2584	  23328	  83476	  14614	aes.elf
+Finished building: aes.elf.size
+ 
+20:33:59 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(1));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:49:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(2));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:50:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(3));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:51:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(4));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:58:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(1));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:60:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(2));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:62:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(3));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:64:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(4));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:79:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(6));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:80:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(7));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:81:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(8));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:82:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(9));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57564	   2584	  23328	  83476	  14614	aes.elf
+Finished building: aes.elf.size
+ 
+20:34:24 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(4));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:58:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(1));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:60:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(2));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:62:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(3));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:64:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data1(4));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:79:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(6));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:80:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(7));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:81:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(8));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:82:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(9));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57564	   2584	  23328	  83476	  14614	aes.elf
+Finished building: aes.elf.size
+ 
+20:35:29 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(4));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(4));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:81:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(6));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:82:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(7));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:83:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(8));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:84:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(9));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57564	   2584	  23328	  83476	  14614	aes.elf
+Finished building: aes.elf.size
+ 
+20:36:25 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r", read_data1(4));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r", read_data1(4));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+../src/main.c:85:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(6));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:86:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(7));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:87:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(8));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+../src/main.c:88:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf(" %x\r\n", read_data2(9));
+           ~^       ~~~~~~~~~~~~~
+           %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57572	   2584	  23328	  83484	  1461c	aes.elf
+Finished building: aes.elf.size
+ 
+20:36:51 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r", read_data1(4));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r", read_data1(4));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+../src/main.c:85:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(6));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:86:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(7));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:87:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(8));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:88:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\r\n", read_data2(9));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57572	   2584	  23328	  83484	  1461c	aes.elf
+Finished building: aes.elf.size
+ 
+20:37:55 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r", read_data1(4));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r", read_data1(4));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+../src/main.c:82:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(6));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:83:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(7));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:84:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(8));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:85:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\r\n", read_data2(9));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57572	   2584	  23328	  83484	  1461c	aes.elf
+Finished building: aes.elf.size
+ 
+20:38:09 **** Incremental Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:39:42 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r\n\r", read_data1(4));
+          ~^               ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:82:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(6));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:83:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(7));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:84:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(8));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:85:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\r\n", read_data2(9));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57588	   2584	  23328	  83500	  1462c	aes.elf
+Finished building: aes.elf.size
+ 
+20:39:46 **** Incremental Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:48:50 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:82:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(6));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:83:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(7));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:84:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(8));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:85:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\r\n", read_data2(9));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57612	   2584	  23328	  83524	  14644	aes.elf
+Finished building: aes.elf.size
+ 
+20:49:00 **** Incremental Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:56:53 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:82:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(6));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:83:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(7));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:84:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(8));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:85:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\r\n", read_data2(9));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57612	   2584	  23328	  83524	  14644	aes.elf
+Finished building: aes.elf.size
+ 
+20:56:56 **** Incremental Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:57:17 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:82:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(6));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:83:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(7));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:84:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(8));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:85:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\r\n", read_data2(9));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57612	   2584	  23328	  83524	  14644	aes.elf
+Finished building: aes.elf.size
+ 
+21:15:03 **** Auto Build of project aes_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/AES_system_v1_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/AES_system_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/AES_system_v1_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/AES_system_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling AES_system..."
+AES_system_selftest.c: In function 'AES_SYSTEM_Reg_SelfTest':
+AES_system_selftest.c:52:59: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( AES_SYSTEM_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                           ^~
+AES_system_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+D:/Xilinx/SDK/2019.1/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+21:15:40 **** Auto Build of configuration Debug for project aes ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../aes_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:49:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:50:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:51:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:63:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(1));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:64:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(2));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:65:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data1(3));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:66:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\n\r\n\r", read_data1(4));
+          ~^           ~~~~~~~~~~~~~
+          %lx
+../src/main.c:82:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(6));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:83:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(7));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:84:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x", read_data2(8));
+          ~^   ~~~~~~~~~~~~~
+          %lx
+../src/main.c:85:11: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  printf("%x\r\n", read_data2(9));
+          ~^       ~~~~~~~~~~~~~
+          %lx
+Finished building: ../src/main.c
+ 
+Building target: aes.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../aes_bsp/ps7_cortexa9_0/lib -o "aes.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: aes.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size aes.elf  |tee "aes.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  57612	   2584	  23328	  83524	  14644	aes.elf
+Finished building: aes.elf.size
+ 

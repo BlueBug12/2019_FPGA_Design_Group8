@@ -25,14 +25,12 @@ u32 read_data2(u32 index)
 {
 	while(AES_SYSTEM_mReadReg (XPAR_AES_SYSTEM_0_S00_AXI_BASEADDR, 40)!=1){
 				//undone
-		//printf("result.\n\r");
 			}
 	u32 data=AES_SYSTEM_mReadReg (XPAR_AES_SYSTEM_0_S00_AXI_BASEADDR, 4*index);			//data_out
     return data;
 }
 void read_en1()
 {
-
 	AES_SYSTEM_mWriteReg(XPAR_AES_SYSTEM_0_S00_AXI_BASEADDR, 32, 1);
 }
 

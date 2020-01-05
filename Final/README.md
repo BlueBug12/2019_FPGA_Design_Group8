@@ -29,17 +29,17 @@ FSM of decoding
 * DONE:結束流程
 
 ### Block diagram
-![bd](./img/bd.png)
+![bd](./img/bd.PNG)
 
 ### Timing report
-![timing](./img/timing.png)
+![timing](./img/timing.PNG)
 
 ### Utilization report
-![ut1](./img/ut1.png) ![ut2](./img/ut2.png)
+![ut1](./img/ut1.png) ![ut2](./img/ut2.PNG)
 
 ### Power report
-![power](./img/power.png)
+![power](./img/power.PNG)
 
 
 ### Result
-![terminal](./img/terminal.png)
+![terminal](./img/terminal.PNG)

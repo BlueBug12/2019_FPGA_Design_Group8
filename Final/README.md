@@ -35,7 +35,7 @@ FSM of decoding
 ![timing](./img/timing.PNG)
 
 ### Utilization report
-![ut1](./img/ut1.png) ![ut2](./img/ut2.PNG)
+![ut1](./img/ut1.PNG) ![ut2](./img/ut2.PNG)
 
 ### Power report
 ![power](./img/power.PNG)
